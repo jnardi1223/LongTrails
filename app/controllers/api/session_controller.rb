@@ -6,8 +6,8 @@ class Api::SessionController < ApplicationController
             login!(@user)
             render "api/users/show"
         else 
-          render json: ["Invalid Credentials"], status 422
-        end 
+          render json: ["Invalid Credentials"], status: 422
+        end
     end
     
     def destroy
