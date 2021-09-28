@@ -1,20 +1,19 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import SignUpContainer from "./session/signup_container";
-import Home from "./home/home"
+import SignUpContainer from "./session/sign_up_container";
+import SignInContainer from "./session/sign_in_container";
+import NavBar from "./nav_bar/nav_bar";
+import { Switch } from "react-router";
+import { AuthRoute, ProtectedRoute } from "../util/route_utils";
 
 const App = () => (
-  <div>
-    {/* <Route exact path="/" component={Home} />
-    <Route exact path="/signup" component={SignUpContainer} />
-    {/* <Route path="/login" component={LoginFormContainer} /> */}
-    {/* <SignUpContainer/> */}
-    {/* <Home/> */}
-    <Route exact path="/" component={Home} />
-    <Route exact path="/signup" component={SignUpContainer} />
-    <Route exact path="/signup" component={SignUpContainer} />
-
-  </div>
+<nav className="nav-bar">
+   <Switch>
+       <AuthRoute exact path="/signup" component={SignUpContainer} />
+       <AuthRoute exact path="/signin" component={SignInContainer} />
+       <Route path="/" component={NavBar} />
+   </Switch>
+</nav>
 );  
 
 export default App;

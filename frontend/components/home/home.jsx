@@ -1,18 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-class Home extends React.Component {
-    render () {
+const Home = ({ user, signOut }) => {
+    if (user) {
+        return (
+            <div className="Home">
+                <div>
+                    <p className="username">Hello, {user.first_name}</p>
+                </div>
+                <button onClick={signOut}>Sign Out</button>
+            </div>
+        )
+    } else {
         return (
             <div>
-                 <h1>Welcome To Long Trails!</h1>
-                 <Link className="btn" type="button" to="/signin">Sign In</Link>
-                 <br/>
-                 <Link className="btn" type="button" to="/signup">Sign Up</Link>
+                <h1>Long Trails</h1>
+                <Link className="button" to="/signup">Sign Up</Link>
+                <Link className="button" to="/signin">Sign In</Link>
             </div>
-          
         )
     }
 }
 
-export default Home; 
+export default Home

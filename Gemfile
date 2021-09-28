@@ -53,7 +53,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'bcrypt'
-  gem 'jquery-rails'
+  # gem 'jquery-rails
+  
 end
 
 group :test do

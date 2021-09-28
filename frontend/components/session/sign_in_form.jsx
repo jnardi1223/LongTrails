@@ -1,42 +1,37 @@
 import React from 'react'; 
 
-class SignUp extends React.Component { 
+class SignIn extends React.Component { 
     constructor(props){
         super(props)
         this.state = {
-            username: "", 
-            email: "",
+            email: "", 
             password: ""
-        }; 
+        }
 
-        this.handleInput = this.handleInput.bind(this); 
+        this.handleSubmit = this.handleSubmit.bind(this); 
     }
+
+    // componentDidMount() {
+    //     this.props.signIn(this.state); 
+    // }
 
     handleInput(type) {
         return (e) => {
-            that.setState({[type]: e.target.value})
+            this.setState({[type]: e.target.value})
         }
     }
 
     handleSubmit(e) {
         e.preventDefault(); 
-        this.props.signUp(this.state)
-            .then( () => this.props.history.push())
+        this.props.signIn(this.state)
+            .then(() => this.props.history.push('/'))
     }
-    
+
     render() {
         return (
-            <div>
-                <h2>Sign Up!</h2>
-                    <form>
-                        <label>Username
-                            <input 
-                                type="text" 
-                                value={this.state.username} 
-                                onChange={this.handleInput("username")}
-                            />
-                        </label>
-                            <br/>
+            <div className="session-form">
+                <h2>{this.props.formType}</h2>
+                    <form onSubmit={this.handleSubmit}>
                         <label>Email
                             <input 
                                 type="email" 
@@ -53,11 +48,11 @@ class SignUp extends React.Component {
                             />
                         </label>
                         <br/>
-                        <button onClick={this.handleSumit}>Submit</button>
+                        <button>Submit</button>
                     </form>
             </div>
         )
     }
 }
 
-export default SignUp
+export default SignIn
