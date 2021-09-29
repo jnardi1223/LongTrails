@@ -13,9 +13,9 @@ class Api::SessionsController < ApplicationController
     def destroy
         if current_user
           logout!
-          render json: { message: 'Logout successful.' }
+          render json: [ message: 'Logout successful.' ]
         else
-          render json: { error: "You must Login first."}, status: 404
+          render json: [ error: "You must Login first."], status: 401
         end
     end
 end

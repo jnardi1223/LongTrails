@@ -1,13 +1,10 @@
-import {connect} from 'react-redux';
-import Home from './home';
-import { signOut } from '../../actions/session';
+import { connect } from "react-redux";
+import Home from "./home";
 
-const mapStateToProps = (state) => ({
-    user: state.entities.users[state.session.id]
-});
+const mapStateToProps = (state) => {
+    return {
+        currentUser: state.entities.users[state.session.currentUserId]
+    };
+};
 
-const mapDispatchToProps = (dispatch) => ({
-  signOut: () => dispatch(signOut())
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, null)(Home);

@@ -11,6 +11,7 @@ class SignUp extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this); 
+        this.demo = this.demo.bind(this); 
     }
 
     // componentDidMount() {
@@ -27,6 +28,16 @@ class SignUp extends React.Component {
         e.preventDefault(); 
         this.props.signUp(this.state)
             .then(() => this.props.history.push('/'))
+    }
+    
+    demo(e) {
+        e.preventDefault();
+
+        const demoUser = { email: "demo@alltreks.com", password: "password123" };
+
+        if (this.props.formType === "Sign up")
+            this.props.signIn(demoUser);
+        else (this.props.signIn(demoUser))
     }
     
     render() {

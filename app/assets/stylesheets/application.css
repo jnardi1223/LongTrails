@@ -13,8 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ /* @import "./components/*"; */
+ @import "./components/background.scss"; 
 
- body {
+ /* body {
     background-color: rgb(69, 219, 69);
   }
 
@@ -44,4 +46,4 @@
       display: block;
       padding: 10px;
       margin: 20px;
-    }
+    } */
