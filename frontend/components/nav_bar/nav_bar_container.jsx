@@ -2,9 +2,11 @@ import {connect} from 'react-redux';
 import Nav from './nav_bar';
 import { signOut } from '../../actions/session';
 
-const mapStateToProps = (state) => ({
-    user: state.entities.users[state.session.id]
-});
+const mapStateToProps = (state) => {
+   return {
+     user: state.entities.users[state.session.id]
+   }
+};
 
 const mapDispatchToProps = (dispatch) => ({
   signOut: () => dispatch(signOut())

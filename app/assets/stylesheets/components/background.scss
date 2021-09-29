@@ -4,10 +4,11 @@
 
 
 .homepage {
-  background-image: image_url('cover1.jpeg');
+  background-image: image_url('main.jpeg');
   background-size: cover;
   position: relative;
   width: 100%;
+  z-index: 0;
   height: 800px;
   color: white;
   text-align: center;

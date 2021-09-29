@@ -7,6 +7,28 @@
     align-items: center;
   }
 
+.sign-in-form {
+  background-image: image_url('sign-in.jpeg');
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  height: 800px;
+  color: black;
+  text-align: center;
+}
+.sign-up-form {
+  background-image: image_url('sign-up.jpeg');
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  height: 800px;
+  color: black;
+  text-align: center;
+}
+
+
 form {
     height: 300px;
     width: 300px;
@@ -16,15 +38,9 @@ form {
     justify-content: center;
     align-items: center;
   }
-
-  label {
-    padding: 10px;
-    display: block;
-  }
-  .button {
-    // display: block;
-    padding: 10px;
-    margin: 20px;
-  }
-
   
+.button {
+  // display: block;
+  padding: 10px;
+  margin: 20px;
+  }

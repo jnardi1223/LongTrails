@@ -13,25 +13,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
+const logo = (
+        <div className="logo-title">
+             <Link to="/">
+                <button>Long Trails</button>
+             </Link>
+        </div> )
+
+
 const Nav = ({ user, signOut }) => {
     if (user) {
         return (
-            <div className="Home">
+            <div className="main-nav">
+                {logo}
                 <div>
-                    <p className="username">Hello, {user.first_name}</p>
+                    <p>Hello, {user.first_name}</p>
                 </div>
                 <button onClick={signOut}>Sign Out</button>
             </div>
         )
     } else {
         return (
-            <div>
-                <h1>Long Trails</h1>
-                <Link className="button" to="/signup">Sign Up</Link>
-                <Link className="button" to="/signin">Sign In</Link>
+            <div className="main-nav">
+                {logo}
+                <div className="user-auth">
+                    <Link className="button" to="/signup">Sign Up</Link>
+                    <Link className="button" to="/signin">Sign In</Link>
+                </div>
             </div>
         )
     }
 }
 
 export default Nav
+

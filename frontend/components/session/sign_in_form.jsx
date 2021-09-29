@@ -51,30 +51,33 @@ class SignIn extends React.Component {
 
     render() {
         return (
-            <div className="session-form">
-                <h2>{this.props.formType}</h2>
+            <div className="sign-in-form">
+                <div className="session-form">
                     <form onSubmit={this.handleSubmit}>
-                        <label>Email
-                            <input 
-                                type="email" 
-                                value={this.state.email} 
-                                onChange={this.handleInput("email")}
-                            />
-                        </label>
-                             <br/>
-                        <label>Password
-                            <input 
-                                type="password" 
-                                value={this.state.password} 
-                                onChange={this.handleInput("password")}
-                            />
-                        </label>
-                        {this.renderErrors()}
-                        <br/>
-                        <button>Submit</button>
-                    </form>
-                    <p>Sign up for free! <button className="inline-link"><Link to="/signup">Sign Up</Link></button></p>
-                    <p>Just exploring? Hit the trail as a <button className="inline-link" onClick={this.demo}>demo user</button></p>
+                        <h2>{this.props.formType}</h2>
+                            <label>Email
+                                <input 
+                                    type="email" 
+                                    value={this.state.email} 
+                                    onChange={this.handleInput("email")}
+                                />
+                            </label>
+                                <br/>
+                            <label>Password
+                                <input 
+                                    type="password" 
+                                    value={this.state.password} 
+                                    onChange={this.handleInput("password")}
+                                />
+                            </label>
+                            {this.renderErrors()}
+                            <br/>
+                            <button>Submit</button>
+                        <p>Sign up for free! <button className="button"><Link to="/signup">Sign Up</Link></button></p>
+                        <p>Just exploring? Hit the trail as a <button onClick={this.demo}>demo user</button></p>
+                        </form>
+                    
+                </div>
             </div>
         )
     }
