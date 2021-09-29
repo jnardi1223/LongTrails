@@ -1,4 +1,5 @@
 import React from 'react'; 
+import { Link } from 'react-router-dom';
 
 class SignIn extends React.Component { 
     constructor(props){
@@ -6,16 +7,23 @@ class SignIn extends React.Component {
         this.state = {
             email: "", 
             password: "",
-            errors: []
-
         }
 
         this.handleSubmit = this.handleSubmit.bind(this); 
+        this.demo = this.demo.bind(this); 
     }
 
     // componentDidMount() {
     //     this.props.signIn(this.state); 
     // }
+
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, idx) => <li key={idx}>{error}</li>)}
+            </ul>
+        )
+    }
 
     handleInput(type) {
         return (e) => {
@@ -31,10 +39,17 @@ class SignIn extends React.Component {
         
     }
 
+    demo(e) {
+        e.preventDefault();
+        const demoUser = { email: "demo@longTrails.com", password: "123456"};
+        this.props.signIn(demoUser);
+    }
+
+    componentWillUnmount() {
+        this.props.reset();
+    }    
+
     render() {
-        let errors = this.state.errors.map((el, idx) => {
-            return <li key={idx}>{el}</li>
-        })
         return (
             <div className="session-form">
                 <h2>{this.props.formType}</h2>
@@ -54,10 +69,12 @@ class SignIn extends React.Component {
                                 onChange={this.handleInput("password")}
                             />
                         </label>
-                        {errors}
+                        {this.renderErrors()}
                         <br/>
                         <button>Submit</button>
                     </form>
+                    <p>Sign up for free! <button className="inline-link"><Link to="/signup">Sign Up</Link></button></p>
+                    <p>Just exploring? Hit the trail as a <button className="inline-link" onClick={this.demo}>demo user</button></p>
             </div>
         )
     }

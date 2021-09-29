@@ -1,4 +1,5 @@
 import React from 'react'; 
+import { Link } from 'react-router-dom';
 
 class SignUp extends React.Component { 
     constructor(props){
@@ -10,8 +11,7 @@ class SignUp extends React.Component {
             password: ""
         }
 
-        this.handleSubmit = this.handleSubmit.bind(this); 
-        this.demo = this.demo.bind(this); 
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     // componentDidMount() {
@@ -29,16 +29,19 @@ class SignUp extends React.Component {
         this.props.signUp(this.state)
             .then(() => this.props.history.push('/'))
     }
-    
-    demo(e) {
-        e.preventDefault();
 
-        const demoUser = { email: "demo@alltreks.com", password: "password123" };
-
-        if (this.props.formType === "Sign up")
-            this.props.signIn(demoUser);
-        else (this.props.signIn(demoUser))
+    renderErrors() {
+        return (
+            <ul>
+                  {this.props.errors.map((error, idx) => <li key={idx}>{error}</li>)}
+            </ul>
+        )
     }
+
+    componentWillUnmount() {
+        this.props.reset();
+    }
+
     
     render() {
         return (
@@ -78,8 +81,10 @@ class SignUp extends React.Component {
                         </label>
                         <br/>
                         <button>Submit</button>
+                        
+                        {this.renderErrors()}
                     </form>
-                    <p>Just exploring? Hit the trail as a <button className="inline-link" onClick={this.demo}>demo user</button></p>
+                    <p>Already have an account? <button className="inline-link"><Link to="/signin">Sign In</Link></button></p>
             </div>
         )
     }

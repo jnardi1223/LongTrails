@@ -6,7 +6,7 @@ const Home = ({currentUser}) => {
     return (
         <div>
             <div className="homepage">
-              Main Page
+              
             </div>
         </div>
     )
