@@ -5,7 +5,9 @@ class SignIn extends React.Component {
         super(props)
         this.state = {
             email: "", 
-            password: ""
+            password: "",
+            errors: []
+
         }
 
         this.handleSubmit = this.handleSubmit.bind(this); 
@@ -25,9 +27,14 @@ class SignIn extends React.Component {
         e.preventDefault(); 
         this.props.signIn(this.state)
             .then(() => this.props.history.push('/'))
+            .fail(() => this.setState({ errors: this.props.errors }))
+        
     }
 
     render() {
+        let errors = this.state.errors.map((el, idx) => {
+            return <li key={idx}>{el}</li>
+        })
         return (
             <div className="session-form">
                 <h2>{this.props.formType}</h2>
@@ -47,6 +54,7 @@ class SignIn extends React.Component {
                                 onChange={this.handleInput("password")}
                             />
                         </label>
+                        {errors}
                         <br/>
                         <button>Submit</button>
                     </form>

@@ -68,6 +68,7 @@ class SignUp extends React.Component {
                         <br/>
                         <button>Submit</button>
                     </form>
+                    <p>Just exploring? Hit the trail as a <button className="inline-link" onClick={this.demo}>demo user</button></p>
             </div>
         )
     }
