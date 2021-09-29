@@ -22,14 +22,20 @@ const receiveErrors = (errors) => ({
 
 export const signUp = user => dispatch => (
     createUser(user) 
-        .then(user => dispatch(receiveCurrentUser(user)))
-        .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
+        .then(user => dispatch(receiveCurrentUser(user)),
+        err => (
+            dispatch(receiveErrors(err.responseJSON))
+        ))
+        // .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 export const signIn = user => dispatch => (
     createSession(user)
-        .then((user) => dispatch(receiveCurrentUser(user)))
-        .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
+        .then((user) => dispatch(receiveCurrentUser(user)),
+        err => (
+            dispatch(receiveErrors(err.responseJSON))
+        ))
+        // .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 export const signOut = () => dispatch => (
