@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import SignUpContainer from "./session/sign_up_container";
 import SignInContainer from "./session/sign_in_container";
 import HomeContainer from "./home/home_container";
@@ -12,11 +12,12 @@ const App = () => (
     <header className="nav-bar">
         <NavBar />
     </header>
-    {/* <Switch> */}
-        <Route exact path="/" component={HomeContainer} />  
+    <Switch>
         <AuthRoute exact path="/signup" component={SignUpContainer} />
         <AuthRoute exact path="/signin" component={SignInContainer} />
-    {/* </Switch */}
+        <Route exact path="/" component={HomeContainer} />  
+        <Redirect to="/"/>
+    </Switch>
 </div>
 );  
 
