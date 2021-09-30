@@ -29,6 +29,14 @@ park_2 = Park.create!(park_name: "Bear Mountain Reservation",
                      park_type: "State",
                      higest_elevation: 2323,
                     )
+park_3 = Park.create!(park_name: "Green Mountain National Forest",
+                     state: "Vermont",
+                     town: "-",
+                     description: "The Green Mountain National Forest is managed by the United States Department of Agriculture Forest Service. Located in Rutland Vermont, the park contains portions of both the Long Trail and the Appalachian Trail as well as other popular peaks and trails. The park is a popular destination in New England for hiking, horseback riding, and mountain biking.",
+                     park_type: "National",
+                     higest_elevation: 4068,
+                    )
+
 
 Trail.destroy_all 
 trail_1 = Trail.create!(trail_name: "Castle Craig",
@@ -54,5 +62,47 @@ trail_3 = Trail.create!(trail_name: "Bear Mountain red and green loop",
                        elevation_gain: 180,
                        route_type: "loop",
                        park_id: park_2.id )
+
+trail_4 = Trail.create!(trail_name: "Lye Brook Falls Trail",
+                       summary: "Lye Brook Falls Trail is a 4.4 mile heavily trafficked out and back trail located near Manchester Center, Vermont that features a waterfall and is rated as moderate. The trail offers a number of activity options and is best used from April until October. Dogs are also able to use this trail but must be kept on leash.",
+                       difficulty: "moderate",
+                       length: "4.4",
+                       elevation_gain: 918,
+                       route_type: "Out & back",
+                       park_id: park_3.id )
+
+
+trail_5 = Trail.create!(trail_name: "Killington Peak",
+                       summary: "Killington Peak via Bucklin Trail is a 7.2 mile heavily trafficked out and back trail located near Mendon, Vermont that features a river and is rated as difficult. The trail offers a number of activity options and is best used from March until October. Dogs are also able to use this trail but must be kept on leash.",
+                       difficulty: "hard",
+                       length: "7.2",
+                       elevation_gain: 2470,
+                       route_type: "Out & back",
+                       park_id: park_3.id )
+
+trail_6 = Trail.create!(trail_name: "Kaystack Mountain Trail",
+                       summary: "Haystack Mountain Trail is a 5 mile heavily trafficked out and back trail located near Wilmington, Vermont that features beautiful wild flowers and is rated as moderate. The trail offers a number of activity options and is best used from March until November. Dogs are also able to use this trail but must be kept on leash.",
+                       difficulty: "moderate",
+                       length: "5.0",
+                       elevation_gain: 1010,
+                       route_type: "Out & back",
+                       park_id: park_3.id )
+                       
+
+trail_7 = Trail.create!(trail_name: "Equinox Mountain and Lookout Rock",
+                       summary: "Equinox Mountain and Lookout Rock is a 6.3 mile heavily trafficked out and back trail located near Arlington, Vermont that features beautiful wild flowers and is rated as difficult. The trail is primarily used for hiking and is best used from May until October. Dogs are also able to use this trail.",
+                       difficulty: "hard",
+                       length: "6.3",
+                       elevation_gain: 2883,
+                       route_type: "Out & back",
+                       park_id: park_3.id )
+
+trail_8 = Trail.create!(trail_name: "Mount Abraham",
+                       summary: "Mount Abraham via Long Trail is a 5.1 mile heavily trafficked out and back trail located near Bristol, Vermont that offers the chance to see wildlife and is rated as difficult. The trail is primarily used for hiking, running, and nature trips and is best used from May until October. Dogs are also able to use this trail but must be kept on leash.",
+                       difficulty: "hard",
+                       length: "5.1",
+                       elevation_gain: 1765,
+                       route_type: "Out & back",
+                       park_id: park_3.id )
 
 
