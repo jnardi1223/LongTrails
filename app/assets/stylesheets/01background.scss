@@ -1,17 +1,20 @@
-.nav-bar {
-  border: gray;
-}
-
-
 .homepage {
-  background-image: image_url('main.jpeg');
+  background-image: image_url('main_.jpeg.png');
   background-size: cover;
   position: relative;
   width: 100%;
   z-index: 0;
   height: 800px;
-  color: white;
+}
+
+.homepage-text {
+  position: absolute;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+  width: 90%;
+  top: 30%;
+  left: 50%;
+  margin-left: -43%;
   font-size: 70px;
+  color: white;
+  font-family: Proxima Nova,Arial,sans-serif;
 }

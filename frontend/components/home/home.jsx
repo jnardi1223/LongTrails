@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 
 const Home = ({currentUser}) => {
     return (
-        <div>
-            <div className="homepage">
+        <div className="homepage">
+            <div className="homepage-text">
               Find your next adventure
+              <SearchContainer />
             </div>
         </div>
     )
