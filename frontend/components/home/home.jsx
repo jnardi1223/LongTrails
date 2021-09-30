@@ -6,7 +6,7 @@ const Home = ({currentUser}) => {
     return (
         <div>
             <div className="homepage">
-              Find your next hike
+              Find your next adventure
             </div>
         </div>
     )
