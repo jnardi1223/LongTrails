@@ -7,7 +7,7 @@ const Home = ({currentUser}) => {
         <div className="homepage">
             <div className="homepage-text">
               Find your next adventure
-              <SearchContainer />
+              {/* <SearchContainer /> */}
             </div>
         </div>
     )
