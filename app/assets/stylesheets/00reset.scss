@@ -9,58 +9,58 @@ select {
   box-sizing: border-box;
   font: inherit;
   text-decoration: inherit;
-  text-align: inherit;
+  // text-align: inherit;
   vertical-align: inherit;
   color: inherit;
-  background: transparent;
+  // background: transparent;
 }
 
-body {
-	line-height: 1;
-}
+// body {
+// 	line-height: 1;
+// }
 
-ol, ul {
-	list-style: none;
-}
+// ol, ul {
+// 	list-style: none;
+// }
 
-textarea {
-    overflow: auto;
-    vertical-align: top;
-    resize: vertical;
-}
+// textarea {
+//     overflow: auto;
+//     vertical-align: top;
+//     resize: vertical;
+// }
 
-label {
-  display: block;
-}
+// label {
+//   display: block;
+// }
 
-button {
-    cursor: pointer;
-}
+// button {
+//     cursor: pointer;
+// }
 
-/* QUESTION: not sure how necessary this is. From CSS Tricks */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; 
-  font-size: 100%; 
-  line-height: 1; 
-}
+// /* QUESTION: not sure how necessary this is. From CSS Tricks */
+// button,
+// input,
+// optgroup,
+// select,
+// textarea {
+//   font-family: inherit; 
+//   font-size: 100%; 
+//   line-height: 1; 
+// }
 
-button,
-input { 
-  overflow: visible;
-}
+// button,
+// input { 
+//   overflow: visible;
+// }
 
-button,
-select {
-  text-transform: none;
-}
+// button,
+// select {
+//   text-transform: none;
+// }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
+// button,
+// [type="button"],
+// [type="reset"],
+// [type="submit"] {
+//   -webkit-appearance: button;
+// }
