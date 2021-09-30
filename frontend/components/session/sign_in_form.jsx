@@ -51,7 +51,7 @@ class SignIn extends React.Component {
 
     render() {
         return (
-            <div className="sign-in-form">
+            <div className="sign-in-page">
                 <div className="session-form">
                     <form onSubmit={this.handleSubmit}>
                         <h2>{this.props.formType}</h2>
@@ -73,7 +73,7 @@ class SignIn extends React.Component {
                             {this.renderErrors()}
                             <br/>
                             <button>Submit</button>
-                        <p>Sign up for free! <button className="button"><Link to="/signup">Sign Up</Link></button></p>
+                        <p>Sign up for free! <button><Link to="/signup">Sign Up</Link></button></p>
                         <p>Just exploring? Hit the trail as a <button onClick={this.demo}>demo user</button></p>
                         </form>
                     

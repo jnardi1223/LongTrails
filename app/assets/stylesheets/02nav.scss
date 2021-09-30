@@ -1,6 +1,6 @@
 .main-nav {
     display: flex;
-    height: 60px;
+    height: 80px;
     margin: 0px 8px;
     display: flex;
     align-items: center;
@@ -26,12 +26,24 @@
     align-items: center;
 }
 
-.user-button {
+.sign-up-button {
     font-size: 18px;
     font-weight: 600;
     padding: 10px 15px;
     border-radius: 8px;
     margin-left: 8px;
+    background-color: #0096ff;
+    color: white;
+}
+.sign-out-button {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-left: 8px;
+    border: 2px solid #0096ff;
+    color: #0096ff;
+    background-color: white;
 }
 
 // .nav-logo-title {
