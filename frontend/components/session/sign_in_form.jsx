@@ -41,7 +41,7 @@ class SignIn extends React.Component {
 
     demo(e) {
         e.preventDefault();
-        const demoUser = { email: "demo@longTrails.com", password: "123456"};
+        const demoUser = { email: "email@demo", password: "123456"};
         this.props.signIn(demoUser);
     }
 
