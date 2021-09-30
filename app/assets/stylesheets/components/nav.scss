@@ -6,7 +6,36 @@
     align-items: center;
 }
 
-.logo-title {
+.nav-site-links {
+    flex: 1;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
+
+.nav-logo-title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-auth {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.user-button {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-left: 8px;
+}
+
+.nav-logo-title {
+    image: image_url("logo.jpeg");
+}
+
+
