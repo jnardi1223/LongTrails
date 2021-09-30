@@ -8,11 +8,11 @@
 
 
 User.delete_all
-User.create!(first_name: "Demo", last_name: "user", email: "email@demo", password: "123456")
-User.create!(first_name: "Jim", last_name: "Nardi", email: "Jim@gmail.com", password: "123456")
-User.create!(first_name: "Emma", last_name: "Hutton", email: "Emma@gmail.com", password: "123456")
-User.create!(first_name: "Justin", last_name: "Gray", email: "Justin@gmail.com", password: "123456")
-User.create!(first_name: "Brian", last_name: "Mahon", email: "Brian@gmail.com", password: "123456")
+demo = User.create!(first_name: "Demo", last_name: "user", email: "email@demo", password: "123456")
+user_1 = User.create!(first_name: "Jim", last_name: "Nardi", email: "Jim@gmail.com", password: "123456")
+user_2 = User.create!(first_name: "Emma", last_name: "Hutton", email: "Emma@gmail.com", password: "123456")
+user_3 = User.create!(first_name: "Justin", last_name: "Gray", email: "Justin@gmail.com", password: "123456")
+user_4 = User.create!(first_name: "Brian", last_name: "Mahon", email: "Brian@gmail.com", password: "123456")
 
 Park.destroy_all
 park_1 = Park.create!(park_name: "Hubbard Park",
@@ -104,5 +104,9 @@ trail_8 = Trail.create!(trail_name: "Mount Abraham",
                        elevation_gain: 1765,
                        route_type: "Out & back",
                        park_id: park_3.id )
+
+review_1 = Review.create(rating: 5, review: "This hike was amazing! The view fromt he top of castle craig is incredible", hike_date: "2021-08-15", user_id: user_1.id, trail_id: trail_1.id)
+review_2 = Review.create(rating: 3, review: "The hike was nice but there was so many peopel at every point", hike_date: "2016-04-11", user_id: user_2.id, trail_id: trail_2.id)
+review_3 = Review.create(rating: 4, review: "Great hike but a little too step for my dog at times.", hike_date: "2020-08-29", user_id: user_3.id, trail_id: trail_3.id)
 
 
