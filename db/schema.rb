@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_28_150037) do
+ActiveRecord::Schema.define(version: 2021_09_30_181928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 2021_09_28_150037) do
     t.index ["park_name"], name: "index_parks_on_park_name"
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.datetime "photo_date"
+    t.datetime "hike_date"
+    t.text "caption"
+    t.integer "user_id"
+    t.integer "trail_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.string "post_date", null: false
     t.string "hike_date", null: false
@@ -41,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_09_28_150037) do
   create_table "trails", force: :cascade do |t|
     t.string "trail_name", null: false
     t.text "summary", null: false
-    t.string "difficutly", null: false
+    t.string "difficulty", null: false
     t.string "length", null: false
     t.integer "elevation_gain", null: false
     t.string "route_type", null: false
