@@ -6,6 +6,7 @@ import HomeContainer from "./home/home_container";
 import NavBar from "./nav_bar/nav_bar_container";
 import { Switch } from "react-router";
 import { AuthRoute, ProtectedRoute } from "../util/route_utils";
+import TrailsShowContainer from "./trails/trails_show_container";
 
 const App = () => (
 <div>
@@ -13,6 +14,7 @@ const App = () => (
         <NavBar />
     </header>
     <Switch>
+        <Route exact path="/trail" component={TrailsShowContainer}/>
         <AuthRoute exact path="/signup" component={SignUpContainer} />
         <AuthRoute exact path="/signin" component={SignInContainer} />
         <Route exact path="/" component={HomeContainer} />  

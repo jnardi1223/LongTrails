@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     resources :trails, only: [:show, :index] 
     resources :reviews, only: [:index, :create, :update, :destroy]
     resources :parks, only: [:show]
+    resources :parks, only: [:show] do
+      resources :trails, only: [:index]
+    end
   end
   
 end
