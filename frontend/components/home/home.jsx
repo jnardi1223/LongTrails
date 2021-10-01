@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import SearchContainer from './search_bar';
 
 
 const Home = ({currentUser}) => {
@@ -7,7 +8,7 @@ const Home = ({currentUser}) => {
         <div className="homepage">
             <div className="homepage-text">
               Find your next adventure
-              {/* <SearchContainer /> */}
+              <SearchContainer />
             </div>
         </div>
     )
