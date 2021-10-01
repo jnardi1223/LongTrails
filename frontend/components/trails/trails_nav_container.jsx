@@ -1,13 +1,13 @@
-import React from "react";
+import {connect} from "react-redux"
+import TrailsNav from "./trails_nav"
 
-class TrailsNav extends React.Component {
-    render() {
-        return (
-        <div>
-            Trail nav bar
-        </div>
-        )
-    }
-}
+// const mapStateToProps = state => {
+    
+// }
 
-export default TrailsNav; 
+// const mapStateToProps = dispatch => {
+    
+// }
+
+
+export default connect(null, null)(TrailsNav); 

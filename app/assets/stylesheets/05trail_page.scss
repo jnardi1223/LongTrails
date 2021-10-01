@@ -1,0 +1,33 @@
+.trail-page-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.trail-page-background {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.trail-header {
+    position: relative;
+    width: 1024px;
+    margin: auto;
+}
+
+.trail-info {
+    position: relative;
+    width: 1024px;
+    border: 1px solid #d6d6d6;
+    background-color: white;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 66.6666667% 33.33333334%;
+}

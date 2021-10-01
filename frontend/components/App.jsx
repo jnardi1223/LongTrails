@@ -14,7 +14,8 @@ const App = () => (
         <NavBar />
     </header>
     <Switch>
-        <Route exact path="/trail" component={TrailsShowContainer}/>
+        <Route exact path="/trails/:trailId" component={TrailsShowContainer}/>
+         {/* <Route path="/parks/:parkId" component={ParksContainer} /> */}
         <AuthRoute exact path="/signup" component={SignUpContainer} />
         <AuthRoute exact path="/signin" component={SignInContainer} />
         <Route exact path="/" component={HomeContainer} />  

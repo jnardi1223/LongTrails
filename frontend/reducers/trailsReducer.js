@@ -5,7 +5,8 @@ const trailsReducer = (oldState = {}, action) => {
     const newState = Object.assign({}, oldState)
     switch (action.type) {
         case RECEIVE_TRAIL:
-            return newState[action.trail.id] = action.trail
+            newState[action.trail.id] = action.trail
+            return newState
         default:
             return oldState
     }

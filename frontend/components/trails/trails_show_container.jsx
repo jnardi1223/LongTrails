@@ -1,15 +1,19 @@
-import React from "react";
-import TrailsNavContainer from "./trails_nav_container";
+import {connect} from "react-redux"
+import TrailsShow from "./trails_show"
+import { receiveTrail } from "../../actions/trails";
 
-class TrailsShow extends React.Component {
-    render() {
-        return (
-        <div className="trail-page-background">
-            Trail Page!
-            <TrailsNavContainer /> 
-        </div>
-        )
-    }
-}
+const mapStateToProps = (state, ownProps) => {
+    return ({
+        trail: state.entities.trails[ownProps.match.params.trailId]
+    })
+}; 
 
-export default TrailsShow; 
+const mapDispatchToProps = dispatch => {
+    return ({
+    receiveTrail: trailId => dispatch(receiveTrail(trailId)) 
+    })
+}; 
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(TrailsShow); 
+

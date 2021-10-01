@@ -7,7 +7,7 @@ const SearchContainer = ({currentUser}) => {
         <div className="search-bar">
             <div className="main-search-bar">
               <form>
-                  <input type="text" value="Enter a park or trail name"></input>
+                  <input type="text"></input>
                   <button className="search-bar-button">Search</button>
               </form>
             </div>
