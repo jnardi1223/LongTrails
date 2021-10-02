@@ -1,33 +1,63 @@
-.trail-page-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    max-width: 1024px;
-    margin: auto;
-}
+// .trail-page-nav {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 15px;
+//     max-width: 1024px;
+//     margin: auto;
+// }
 
 .trail-page-background {
+    background-color: #F2F2F2;
+    height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    max-width: 1024px;
-    margin: auto;
+    z-index: -99;
 }
 
 .trail-header {
-    position: relative;
-    width: 1024px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    max-width: 1024px;
     margin: auto;
 }
 
-.trail-info {
-    position: relative;
-    width: 1024px;
-    border: 1px solid #d6d6d6;
-    background-color: white;
+
+.bread-crumbs {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    color: #999999;
+    font-family: "Montserrat", Arial, sans-serif, Arial, sans-serif;
+}
+
+.bread-crumbs p {
+    padding: 10px;
+    font-size: 12px;
+    line-height: normal;
+}
+
+.hike-title-content {
+    position: absolute;
+    color: white;
+    top: 150px;
+    left: 24px;
     margin: auto;
-    display: grid;
-    grid-template-columns: 66.6666667% 33.33333334%;
+}
+
+.title-photo-box {
+    width: 1024px;
+    height: 312px;
+    overflow: hidden;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+.img {
+        width: 1024px;
+
+    }
 }

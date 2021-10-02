@@ -1,4 +1,4 @@
-import * as ParkAPIUtil from '../util/park_api_util'
+import * as ParkAPIUtil from '../util/park_utils'
 
 export const RECEIVE_PARK = "RECEIVE_PARK"
 export const RECEIVE_PARK_TRAILS = "RECEIVE_PARK_TRAILS"

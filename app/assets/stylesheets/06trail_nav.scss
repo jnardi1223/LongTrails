@@ -1,0 +1,29 @@
+.trails-page-nav {
+    box-sizing: border-box;
+    font: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    vertical-align: inherit;
+    color: inherit;
+    background: transparent;
+}
+
+.sub-search-input {
+    display: flex;
+    border-radius: 8px;
+    flex-direction: row;
+    width: 326px;
+    font-family: "Montserrat", Arial, sans-serif, Arial, sans-serif;
+    font-size: 13px;
+    border: 1px solid #e6e6e6;
+    color: #414141;
+    vertical-align: middle;
+    padding-left: 7px;
+    background-color: white;
+}
+
+.sub-search-input input {
+    width: 100%;
+    color: #414141;
+    text-align: left;
+}
