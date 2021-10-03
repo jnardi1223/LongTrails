@@ -39,11 +39,9 @@
     line-height: normal;
 }
 
-.hike-title-content {
-    position: absolute;
-    color: white;
-    top: 150px;
-    left: 24px;
+.trail-title {
+    position: relative;
+    width: 1024px;
     margin: auto;
 }
 
@@ -55,9 +53,115 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-
+    border:1px solid black;
+    background-color: green;
+}
 .img {
-        width: 1024px;
+    width: 1024px;
+    }
 
+
+.trail-title-header {
+    font-size: 32px;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: white;
+    font-weight: 600;
+    margin: 16px 0 0;
+    padding-bottom: 8px;
+}
+
+.difficulty { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.trail-info {
+    position: relative;
+    width: 1024px;
+    border: 1px solid #d6d6d6;
+    background-color: white;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 66.6666667% 33.33333334%;
+    border:1px solid black;
+}
+
+.trail-summary1 {
+    background-color: white;
+    font-family: "Work Sans", Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.44;
+    color: #646255;
+    font-weight: 375;
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e2e2;
+    margin: 0 24px;
+}
+
+.left-side {
+    background-color: white;
+    border-right: 1px solid #e2e2e2;
+    
+    .trail-stat {
+        padding-bottom: 6px;
+        flex: 1;
+    
+        p {
+            font-family: "Work Sans", Helvetica, sans-serif;
+            line-height: 1.44;
+            color: #646255;
+            font-weight: 375;
+            font-size: 12px;
+        }
+    }
+    span {
+        font-family: "Montserrat", Arial, sans-serif;
+        color: #414141;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 1.38;
     }
 }
+
+
+.right-side{
+    background-color: white;
+    display: grid;
+    grid-template-rows: 25%;
+    width: 100%;
+    margin: auto;
+    margin-top: 5px;
+    padding: 3px 0;
+    border:1px solid black;
+
+    .map {
+        width: inherit;
+        padding-left: 5px;
+    }
+}
+
+.trail-stats {
+    background-color: white;
+    margin: 0 24px;
+    padding-top: 24px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+// .trail-stat {
+//     padding-bottom: 6px;
+//     flex: 1;
+
+//     p {
+//         font-family: "Work Sans", Helvetica, sans-serif;
+//         line-height: 1.44;
+//         color: #646255;
+//         font-weight: 375;
+//         font-size: 12px;
+//     }
+// }

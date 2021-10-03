@@ -35,14 +35,37 @@ class TrailsShow extends React.Component {
             </div>
                 
             <div className="trail-title">
-                <h1 className="trail-header">{this.props.trail.trail_name}</h1>
                 <div className="title-photo-box">
-                 <div className="img">Trail Photo</div>
-                {/* <img>Trail Photo</img> */}
+                    <h1 className="trail-title-header">{this.props.trail.trail_name}</h1>
+                    <div className="difficulty">{this.props.trail.difficulty }</div>
+                </div>
+               
             </div>
-            </div>
+
             <div className="trail-info">
-                Trail information with description and reviews
+                <div className="left-side">
+                    <div className="trail-summary1">
+                        <p>{this.props.trail.summary}</p>
+                    </div>
+                    <div className="trail-stats">
+                        <div className="trail-stat">
+                            <p>Length</p>
+                            <span>{this.props.trail.length} Miles</span>
+                        </div>
+                        <div className="trail-stat">
+                            <p>Elevation Gain</p>
+                            <span>{this.props.trail.elevation_gain} ft</span>
+                        </div>
+                        <div className="trail-stat">
+                            <p>Route Type</p>
+                            <span>{this.props.trail.route_type}</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="right-side">
+                    <div className="map">This will be the map </div>
+                </div>
+                    
             </div>
         </div>
         );
