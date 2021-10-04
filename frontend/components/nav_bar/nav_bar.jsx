@@ -1,13 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCampground } from "@fortawesome/free-solid-svg-icons";
 
 
 const logo = (
         <div className="nav-logo-title">
-             <Link to="/">
-                <button>Long Trails</button>
-             </Link>
+            <div>
+                <Link to="/">
+                    <i className="fas faCampground fa-2x">
+                    <FontAwesomeIcon icon={faCampground} />
+                    </i>
+                </Link>
+             </div>
+             <div className="nav-title">LongTrails</div> 
         </div> )
+        
 
 const navSiteLinks = (
     <div className="nav-site-links">

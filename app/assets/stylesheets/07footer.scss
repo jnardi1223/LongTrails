@@ -1,0 +1,36 @@
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #E6E6E6;
+    height: 200px;
+
+        a {
+            color: green;
+        }
+}
+
+.footer-content {
+    background-color: #E6E6E6;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 3vh;
+    width: 100vw;
+}
+
+.footer-logo {
+    // font: ;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #808080;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}

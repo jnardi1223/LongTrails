@@ -6,6 +6,17 @@
     align-items: center;
 }
 
+.nav-title {
+    padding-left: 10px;
+    color:gray;
+    font-size: 30px;
+    box-sizing: border-box;
+    text-decoration: inherit;
+    text-align: inherit;
+    vertical-align: inherit;
+    background: transparent;
+}
+
 .nav-site-links {
     flex: 1;
     display: flex;
@@ -14,6 +25,7 @@
 }
 
 .nav-logo-title {
+    color:green;
     flex: 1;
     display: flex;
     justify-content: center;

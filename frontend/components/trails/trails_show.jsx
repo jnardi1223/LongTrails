@@ -61,11 +61,22 @@ class TrailsShow extends React.Component {
                             <span>{this.props.trail.route_type}</span>
                         </div>
                     </div>
+                    <div className="tab">
+                        <p>Description</p>
+                    </div>
+                    <div className="trail-summary1">
+                        <p>{this.props.trail.summary}</p>
+                    </div>
+                    <div className="tab">
+                        <p>Reviews</p>
+                    </div>
+
                 </div>
                 <div className="right-side">
-                    <div className="map">This will be the map </div>
+                    <div className="map">Map</div>
+                    <div className="nearby-trails">Nearby Trails</div>
                 </div>
-                    
+               
             </div>
         </div>
         );

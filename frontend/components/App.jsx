@@ -7,6 +7,7 @@ import NavBar from "./nav_bar/nav_bar_container";
 import { Switch } from "react-router";
 import { AuthRoute, ProtectedRoute } from "../util/route_utils";
 import TrailsShowContainer from "./trails/trails_show_container";
+import Footer from "./home/footer";
 
 const App = () => (
 <div>
@@ -21,7 +22,7 @@ const App = () => (
         <Route exact path="/" component={HomeContainer} />  
         <Redirect to="/"/>
     </Switch>
-    {/* <Footer /> */}
+    <Footer />
 </div>
 );  
 
