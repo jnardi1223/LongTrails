@@ -22,6 +22,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'bcrypt'
+gem "figaro"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

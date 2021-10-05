@@ -13,7 +13,7 @@
 #  updated_at       :datetime         not null
 #
 class Park < ApplicationRecord
-    validates :park_name, :description, :state, presence: :true
+    validates :park_name, :description, :state, :long, :lat, presence: :true
     validates :park_type, inclusion: { in: ["National", "State", "Reginal", "Town"]}
     
     has_many :trails

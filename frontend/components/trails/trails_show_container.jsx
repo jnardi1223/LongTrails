@@ -3,7 +3,7 @@ import TrailsShow from "./trails_show"
 import { receiveTrail } from "../../actions/trails";
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state.entities.parks[ownProps.match.params.trail_id])
+    // console.log(state.entities.parks[ownProps.match.params.trail_id])
     return ({
         trail: state.entities.trails[ownProps.match.params.trailId]
     })

@@ -4,6 +4,7 @@ import SearchContainer from './search_bar';
 
 
 const Home = ({currentUser}) => {
+
     return (
         <div className="homepage">
             <div className="homepage-text">

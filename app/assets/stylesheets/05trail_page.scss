@@ -52,7 +52,7 @@
     overflow: hidden;
     display: flex; 
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     margin: auto;
     border:1px solid black;
     background-color: green;
@@ -76,6 +76,8 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    // background-color: gray;
+    
 }
  
 .trail-info {
@@ -150,10 +152,10 @@
     padding: 20px;
     background-color: #F2F2F2;
 }
-//right side of grid
+// right side of grid
 .map {    
-    padding-bottom: 300px;
-    border:1px solid black;
+    padding-bottom: 10px;
+    // border:1px solid black;
 }
 
 .nearby-trails {    

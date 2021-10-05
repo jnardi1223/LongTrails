@@ -14,7 +14,7 @@
 #  updated_at     :datetime         not null
 #
 class Trail < ApplicationRecord
-    validates :trail_name, :difficulty, :summary, :route_type, :length, presence: true
+    validates :trail_name, :difficulty, :summary, :route_type, :length, :long, :lat, presence: true
     validates :difficulty, inclusion: { in: ["easy", "moderate", "difficult", "hard"]}
     validates :route_type, inclusion: { in: ["Out & back", "loop", "Point to point"]}
     

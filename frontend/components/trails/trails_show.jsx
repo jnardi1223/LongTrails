@@ -1,5 +1,6 @@
 import React from "react";
 import TrailsNavContainer from "./trails_nav_container";
+import Map from "./map";
 
 class TrailsShow extends React.Component {
     constructor(props) {
@@ -22,13 +23,15 @@ class TrailsShow extends React.Component {
         if (!this.props.trail) {
             return null
         };
+
+        const {trail} = this.props;
         return (
         <div className="trail-page-background">
              
             <div className="trail-header">
                 <div className="bread-crumbs">
                     <p>United States</p>   {">"}
-                    {this.props.trail.park_id === 20 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
+                    {trail.park_id === 20 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
                     <p>Park name and link to that park</p>
                 </div>
                 <TrailsNavContainer /> 
@@ -36,8 +39,10 @@ class TrailsShow extends React.Component {
                 
             <div className="trail-title">
                 <div className="title-photo-box">
-                    <h1 className="trail-title-header">{this.props.trail.trail_name}</h1>
-                    <div className="difficulty">{this.props.trail.difficulty }</div>
+                    <div className="title-info-container">
+                        <h1 className="trail-title-header">{trail.trail_name}</h1>
+                        <div className="difficulty">{trail.difficulty }</div>
+                    </div>
                 </div>
                
             </div>
@@ -45,27 +50,27 @@ class TrailsShow extends React.Component {
             <div className="trail-info">
                 <div className="left-side">
                     <div className="trail-summary1">
-                        <p>{this.props.trail.summary}</p>
+                        <p>{trail.summary}</p>
                     </div>
                     <div className="trail-stats">
                         <div className="trail-stat">
                             <p>Length</p>
-                            <span>{this.props.trail.length} Miles</span>
+                            <span>{trail.length} Miles</span>
                         </div>
                         <div className="trail-stat">
                             <p>Elevation Gain</p>
-                            <span>{this.props.trail.elevation_gain} ft</span>
+                            <span>{trail.elevation_gain} ft</span>
                         </div>
                         <div className="trail-stat">
                             <p>Route Type</p>
-                            <span>{this.props.trail.route_type}</span>
+                            <span>{trail.route_type}</span>
                         </div>
                     </div>
                     <div className="tab">
                         <p>Description</p>
                     </div>
                     <div className="trail-summary1">
-                        <p>{this.props.trail.summary}</p>
+                        <p>{trail.summary}</p>
                     </div>
                     <div className="tab">
                         <p>Reviews</p>
@@ -73,7 +78,9 @@ class TrailsShow extends React.Component {
 
                 </div>
                 <div className="right-side">
-                    <div className="map">Map</div>
+                    <div className="map">
+                        <Map trail={trail}/>
+                    </div>
                     <div className="nearby-trails">Nearby Trails</div>
                 </div>
                
