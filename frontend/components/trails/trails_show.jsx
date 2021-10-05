@@ -1,6 +1,9 @@
 import React from "react";
 import TrailsNavContainer from "./trails_nav_container";
 import Map from "./map";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRoute } from "@fortawesome/free-solid-svg-icons";
+// import {trail} from "../../app/assets/images/trail-page-demo/jpeg"
 
 class TrailsShow extends React.Component {
     constructor(props) {
@@ -31,7 +34,7 @@ class TrailsShow extends React.Component {
             <div className="trail-header">
                 <div className="bread-crumbs">
                     <p>United States</p>   {">"}
-                    {trail.park_id === 20 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
+                    {trail.park_id === 6 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
                     <p>Park name and link to that park</p>
                 </div>
                 <TrailsNavContainer /> 
@@ -39,12 +42,22 @@ class TrailsShow extends React.Component {
                 
             <div className="trail-title">
                 <div className="title-photo-box">
-                    <div className="title-info-container">
+                    <div className="title-info-box">
                         <h1 className="trail-title-header">{trail.trail_name}</h1>
-                        <div className="difficulty">{trail.difficulty }</div>
+                            <div className="difficulty-rating">
+                                <div className="difficulty">{trail.difficulty }</div>
+                                <div>Review Stars</div>
+                            </div>
                     </div>
                 </div>
-               
+                <div className="trail-links">
+                    <div className="trail-directions">
+                        <a target="_blank" href={`https://www.google.com/maps/dir/Current+Location/${trail.lat},${trail.long}`} >
+                            <FontAwesomeIcon icon={faRoute} />
+                        </a>
+                        <p>Directions</p>
+                    </div>
+                </div>
             </div>
 
             <div className="trail-info">

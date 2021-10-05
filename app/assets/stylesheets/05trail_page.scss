@@ -61,6 +61,9 @@
     width: 1024px;
     }
 
+.title-photo-box {
+    background-image: image_url('trail-demo.jpeg');
+}
 
 .trail-title-header {
     font-size: 32px;
@@ -71,13 +74,64 @@
     padding-bottom: 8px;
 }
 
-.difficulty { 
+.title-info-box {
+    position: absolute;
+    color: white;
+    top: 150px;
+    left: 24px;
+    margin: auto;
+}
+
+.difficulty-rating {
     display: flex;
-    flex-direction: row;
+    // flex-direction: column;
     justify-content: flex-start;
+    align-items: left;
+}
+
+.difficulty { 
+    background-color: gray;
+    padding: 4px 12px;
+    color: white;
+    border-radius: 8px;
+    font-family: "Work Sans", Helvetica, sans-serif;
+    font-size: 11px;
+}
+.trail-links {
+    background: #428a13;
+    height: 55px;
+    width: 1024px;
+    margin: auto;
+    margin-bottom: 0;
+    border-top: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.trail-directions {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    // background-color: gray;
-    
+    justify-content: space-between;
+    cursor: pointer;
+    background: inherit;
+    border: none;
+    outline: none;
+    margin-top: -22px;
+    background-color: transparent;
+
+    a {
+        font-size: 16px;
+        padding: 15px;
+        border-radius: 50%;
+        // box-shadow: 0 2px 4px 0 rgb(0 0 0 / 24%), 0 0 8px 0 rgb(0 0 0 / 8%);
+        background-color: white;
+
+    }
+
+    p {
+        color: white;
+    }
 }
  
 .trail-info {
