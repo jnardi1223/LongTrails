@@ -5,7 +5,6 @@ import {receivePark, receiveParkTrails} from "../../actions/parks"
 const mapStateToProps = (state, ownProps) => {
     return {
         // parks: state.entities.parks,
-        
         park: state.entities.parks[ownProps.match.params.parkId], 
         trails: Object.values(state.entities.trails)  
     }

@@ -1,6 +1,6 @@
 import { combineReducers } from "redux"
-import parksReducer from "./parksReducer";
-import trailsReducer from "./trailsReducer";
+import parksReducer from "./parks_reducer";
+import trailsReducer from "./trails_reducer";
 import usersReducer from "./users_reducer"
 
 
