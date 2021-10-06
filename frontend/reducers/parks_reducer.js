@@ -1,5 +1,6 @@
-import { RECEIVE_PARK, RECEIVE_PARK_TRAILS} from "../actions/parks";
+import { RECEIVE_PARK} from "../actions/parks";
 
+// console.log("parksRreducer")
 const parksReducer = (oldState = {}, action) => {
     Object.freeze(oldState); 
     const newState = Object.assign({}, oldState)
@@ -8,8 +9,6 @@ const parksReducer = (oldState = {}, action) => {
         case RECEIVE_PARK:
             newState[action.park.id] = action.park
             return newState
-        case RECEIVE_PARK_TRAILS:
-            return action.trails
         default:
             return oldState
     }

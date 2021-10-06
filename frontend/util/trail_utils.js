@@ -1,6 +1,7 @@
-export const fetchTrail = trailId => (
-    $.ajax({
+export const fetchTrail = trailId => {
+    // console.log("util")
+    return $.ajax({
         url: `/api/trails/${trailId}`,
         method: "GET"
     })
-); 
+}; 

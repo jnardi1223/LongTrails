@@ -17,7 +17,7 @@ const App = () => (
     </header>
     <Switch>
         <Route exact path="/trail/:trailId" component={TrailsShowContainer}/>
-        <Route path="/park/:parkId" component={ParksShowContainer} />
+        <Route exact path="/park/:parkId" component={ParksShowContainer} />
         <AuthRoute exact path="/signup" component={SignUpContainer} />
         <AuthRoute exact path="/signin" component={SignInContainer} />
         <Route exact path="/" component={HomeContainer} />  

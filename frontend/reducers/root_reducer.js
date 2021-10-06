@@ -3,7 +3,7 @@ import sessionReducer from './session_reducer'
 import entitiesReducer from './entitiesReducer';
 import errorsReducer from './errors_reducer'
 
-
+// console.log("rootReducer")
 const rootReducer = combineReducers({
     session: sessionReducer,
     entities: entitiesReducer,

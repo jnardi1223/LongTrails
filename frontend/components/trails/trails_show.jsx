@@ -1,9 +1,8 @@
 import React from "react";
 import TrailsNavContainer from "./trails_nav_container";
-import Map from "./map";
+import Map from "../map/map";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoute } from "@fortawesome/free-solid-svg-icons";
-// import {trail} from "../../app/assets/images/trail-page-demo/jpeg"
 
 class TrailsShow extends React.Component {
     constructor(props) {

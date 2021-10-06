@@ -1,9 +1,10 @@
-export const fetchPark = parkId => (
-    $.ajax({
+export const fetchPark = parkId => {
+    // console.log("util")
+    return $.ajax({
         url: `/api/parks/${parkId}`,
         method: "GET"
     })
-);
+};
 
 
 export const fetchParkTrails = parkId => (

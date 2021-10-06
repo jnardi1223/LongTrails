@@ -5,6 +5,6 @@ class Api::TrailsController < ApplicationController
     end 
 
     def index
-        @trails = Trail.all
+        @trails = Trail.where(park_id: params[:park_id])
     end 
 end 
