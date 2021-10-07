@@ -58,7 +58,7 @@ class SignUp extends React.Component {
                             </label>
                             <br/>
                             <label>Last Name
-                                <input 
+                                <input className="text-field"
                                     type="text" 
                                     value={this.state.last_name} 
                                     onChange={this.handleInput("last_name")}
@@ -66,7 +66,7 @@ class SignUp extends React.Component {
                             </label>
                                 <br/>
                             <label>Email
-                                <input 
+                                <input className="text-field"
                                     type="email" 
                                     value={this.state.email} 
                                     onChange={this.handleInput("email")}
@@ -74,12 +74,13 @@ class SignUp extends React.Component {
                             </label>
                                 <br/>
                             <label>Password
-                                <input 
+                                <input className="text-field"
                                     type="password" 
                                     value={this.state.password} 
                                     onChange={this.handleInput("password")}
                                 />
                             </label>
+                            <br/>
                             <br/>
                             <button className="prime">Submit</button>
                             

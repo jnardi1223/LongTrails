@@ -44,9 +44,12 @@ class Home extends React.Component {
                     {/* <SearchContainer /> */}
                     </div>
                 </div>
-                    <div>
-                        <Parks parks={parks}/> 
-                    </div>
+                <div>
+                    <Parks parks={parks}/> 
+                </div>
+                <div>
+                    
+                </div>
             </div>
         )
     }

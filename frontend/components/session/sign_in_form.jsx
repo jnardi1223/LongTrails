@@ -64,7 +64,7 @@ class SignIn extends React.Component {
                             </label>
                                 <br/>
                             <label>Password
-                                <input 
+                                <input className="text-field"
                                     type="password" 
                                     value={this.state.password} 
                                     onChange={this.handleInput("password")}
@@ -73,7 +73,7 @@ class SignIn extends React.Component {
                             {this.renderErrors()}
                             <br/>
                             <button className="prime">Submit</button>
-                        <p>Sign up for free!  <Link className="inline-link" to="/signup">Sign Up</Link></p>
+                        <p>Sign up for free! <Link className="inline-link" to="/signup">Sign Up</Link></p>
                         <p>Hit the trail as a<button className="inline-link" onClick={this.demo}>demo user</button></p>
                         </form>
                     

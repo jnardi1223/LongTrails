@@ -29,9 +29,9 @@ const Nav = ({ user, signOut }) => {
             <div className="main-nav">
                 {logo}
                 <div>
-                    <p>Hello, {user.first_name}</p>
+                    <p className="users-name">Hello, {user.first_name}</p>
                 </div>
-                <button className="user-button" onClick={signOut}>Sign Out</button>
+                <button className="sign-out-button" onClick={signOut}>Sign Out</button>
             </div>
         )
     } else {

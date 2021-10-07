@@ -29,7 +29,7 @@ class ParksShow extends React.Component {
             <div className="park-page">
                 <div className="bread-crumbs">
                     <p>United States</p>   {">"}
-                    {park.id === 12 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
+                    <p>{park.state}</p>   {">"}
                     <p>{park.park_name}</p>
                     {/* <TrailsNavContainer/> */}
                 </div>

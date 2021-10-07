@@ -3,6 +3,7 @@ import TrailsNavContainer from "./trails_nav_container";
 import Map from "../map/map";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoute } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 class TrailsShow extends React.Component {
     constructor(props) {
@@ -25,16 +26,19 @@ class TrailsShow extends React.Component {
         if (!this.props.trail) {
             return null
         };
+        // if (!this.props.park) {
+        //     return null
+        // };
 
-        const {trail} = this.props;
+        const {trail, park} = this.props;
         return (
         <div className="trail-page-background">
              
             <div className="trail-header">
                 <div className="bread-crumbs">
                     <p>United States</p>   {">"}
-                    {trail.park_id === 6 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
-                    <p>Park name and link to that park</p>
+                    <p>{park.state}</p>  {">"}
+                    <Link to={`/park/${park.id}`}><p>{park.park_name}</p></Link>
                 </div>
                 {/* <TrailsNavContainer />  */}
             </div>

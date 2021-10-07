@@ -1,13 +1,17 @@
 import {connect} from "react-redux"
 import TrailsShow from "./trails_show"
 import { receiveTrail } from "../../actions/trails";
-//import receieve parks to be able 
-// console.log("trailsContainer")
+
 const mapStateToProps = (state, ownProps) => {
-    // console.log(state.entities.trails[ownProps.match.params.trailId])
-    // debugger
+    console.log(state)
+    // console.log(state.entities.trails.trailId)
+    if (!state.entities.trails[ownProps.match.params.trailId]) {
+        return {}; 
+    }
+    console.log(state.entities.trails[ownProps.match.params.trailId].park)
     return ({
-        trail: state.entities.trails[ownProps.match.params.trailId]
+        trail: state.entities.trails[ownProps.match.params.trailId],
+        park: state.entities.trails[ownProps.match.params.trailId].park
     })
 }; 
 
