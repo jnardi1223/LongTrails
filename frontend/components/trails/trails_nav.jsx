@@ -9,10 +9,10 @@ class TrailsNav extends React.Component {
     render() {
         return (
         <div className="trail-page-nav">
-            <form className="sub-search-input">
+            {/* <form className="sub-search-input">
                 <input value="Enter park or trial name"></input>
                 <button>Search</button>
-            </form>
+            </form> */}
         </div>
         )
     }

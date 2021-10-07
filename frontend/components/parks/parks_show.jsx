@@ -31,7 +31,10 @@ class ParksShow extends React.Component {
                     <p>United States</p>   {">"}
                     {park.id === 12 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
                     <p>{park.park_name}</p>
-                    <TrailsNavContainer/>
+                    {/* <TrailsNavContainer/> */}
+                </div>
+                <div className="title-photo-box">
+                    <img src={park.img_url}/>
                 </div>
                 <div className="park-description">
                     <h1>{park.park_name}</h1> 

@@ -36,7 +36,7 @@ class TrailsShow extends React.Component {
                     {trail.park_id === 6 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
                     <p>Park name and link to that park</p>
                 </div>
-                <TrailsNavContainer /> 
+                {/* <TrailsNavContainer />  */}
             </div>
                 
             <div className="trail-title">

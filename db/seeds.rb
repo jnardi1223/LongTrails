@@ -22,8 +22,10 @@ park_1 = Park.create!(park_name: "Hubbard Park",
                      park_type: "Town",
                      higest_elevation: 1020,
                      lat: 41.5482,
-                     long: -72.8361
+                     long: -72.8361,
+                     img_url: "https://cdn-assets.alltrails.com/uploads/photo/image/19227837/large_5719c3b518d4573205f3f21d9aba4839.jpg"
                     )
+
 park_2 = Park.create!(park_name: "Bear Mountain Reservation",
                      state: "Connecticut",
                      town: "New Fiarfield",
@@ -31,7 +33,8 @@ park_2 = Park.create!(park_name: "Bear Mountain Reservation",
                      park_type: "State",
                      higest_elevation: 2323,
                      lat: 41.3129,
-                     long: -74.0063
+                     long: -74.0063,
+                     img_url: "https://cdn10.phillymag.com/wp-content/uploads/sites/3/2020/09/bear-mountain-state-park-gb.jpg"
                     )
 park_3 = Park.create!(park_name: "Green Mountain National Forest",
                      state: "Vermont",
@@ -40,7 +43,8 @@ park_3 = Park.create!(park_name: "Green Mountain National Forest",
                      park_type: "National",
                      higest_elevation: 4068,
                      lat: 43.0548,
-                     long: -729996
+                     long: -729996,
+                     img_url: "https://peakvisor.com/img/news/Green-Mountains-National-Forest1.jpg"
                     )
 
 
@@ -53,8 +57,8 @@ trail_1 = Trail.create!(trail_name: "Castle Craig",
                        route_type: "loop",
                        park_id: park_1.id,
                        lat: 41.5566,
-                       long: -72.8355 
-
+                       long: -72.8355,
+                       img_url: "https://www.ctvisit.com/sites/default/files/styles/square_image/public/Castle-Craig_Fall_Sq.jpg?itok=ASdIFjRq"
                     ); 
 
 trail_2 = Trail.create!(trail_name: "Bear Mountain red, white, and yellow loop",
@@ -87,7 +91,8 @@ trail_4 = Trail.create!(trail_name: "Lye Brook Falls Trail",
                        route_type: "Out & back",
                        park_id: park_3.id,
                        lat: 43.1590,
-                       long: -71.0411
+                       long: -71.0411,
+                       img_url: "https://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5322238.jpg"
                     )
 
 
@@ -99,7 +104,9 @@ trail_5 = Trail.create!(trail_name: "Killington Peak",
                        route_type: "Out & back",
                        park_id: park_3.id,
                        lat: 43.6045,
-                       long: -72.8201
+                       long: -72.8201,
+                       img_url: "https://vermontexplored.com/wp-content/uploads/2021/01/Killington-hiking.jpg"
+
                     )
 
 trail_6 = Trail.create!(trail_name: "Haystack Mountain Trail",
@@ -110,7 +117,9 @@ trail_6 = Trail.create!(trail_name: "Haystack Mountain Trail",
                        route_type: "Out & back",
                        park_id: park_3.id,
                        lat: 42.8996,
-                       long: -72.9109
+                       long: -72.9109,
+                       img_url: "https://www.saranaclake.com/f/styles/listing_slideshow/public/listing/15229/images/rs93082-dsc3047.jpg?itok=No79ROi9"
+
                     )
                        
 
@@ -122,7 +131,8 @@ trail_7 = Trail.create!(trail_name: "Equinox Mountain and Lookout Rock",
                        route_type: "Out & back",
                        park_id: park_3.id,
                        lat: 43.1632,
-                       long: -73.0787
+                       long: -73.0787,
+                       img_url: "https://s3-us-west-1.amazonaws.com/peakery-media/images/items/users/cache/lookout-rock-vermont-2012-01-16-1.JPG.480x360_q95.jpg"
                     )
 
 trail_8 = Trail.create!(trail_name: "Mount Abraham",
@@ -133,7 +143,8 @@ trail_8 = Trail.create!(trail_name: "Mount Abraham",
                        route_type: "Out & back",
                        park_id: park_3.id,
                        lat: 44.0942,
-                       long: -73.9264 
+                       long: -73.9264,
+                       img_url: "https://lh3.googleusercontent.com/proxy/RV4mz433JrVmGa6O24R-8IiEKQH0sdvT4FS0ZgfEZQdZ1KRcWyfvmKSkUYvAtA0gyWlB8raWPWSoa-nwRQ9uU9xFnw"
                     )
 
 # review_1 = Review.create(rating: 5, review: "This hike was amazing! The view fromt he top of castle craig is incredible", hike_date: "2021-08-15", user_id: user_1.id, trail_id: trail_1.id)
