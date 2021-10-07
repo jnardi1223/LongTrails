@@ -1,4 +1,4 @@
-json.extract! @park, :id, :park_name, :state, :town, :description, :park_type, :higest_elevation, :long, :lat, :img_url
+json.extract! @park, :id, :park_name, :state, :town, :description, :park_type, :higest_elevation, :long, :lat, :img_url, :img_url_2
 
 
 # json.array! @trails do |trail|

@@ -41,11 +41,12 @@ class TrailsShow extends React.Component {
                 
             <div className="trail-title">
                 <div className="title-photo-box">
+                    <img src={trail.img_url_2}/>
                     <div className="title-info-box">
                         <h1 className="trail-title-header">{trail.trail_name}</h1>
                             <div className="difficulty-rating">
                                 <div className="difficulty">{trail.difficulty }</div>
-                                <div>Review Stars</div>
+                                {/* <div>Review Stars</div> */}
                             </div>
                     </div>
                 </div>
