@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 const ParkItem = ({park}) => {
     return (
         <Link to={`/park/${park.id}`} className ="trail-item">
+            <img src={park.img_url}/>
             <div className="trail-item-content">
                 <h2>{park.park_name}</h2>
                 <p>{park.state}</p>

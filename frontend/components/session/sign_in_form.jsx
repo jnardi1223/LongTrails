@@ -56,7 +56,7 @@ class SignIn extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         <h2>{this.props.formType}</h2>
                             <label>Email
-                                <input 
+                                <input className="text-field" 
                                     type="email" 
                                     value={this.state.email} 
                                     onChange={this.handleInput("email")}
@@ -72,9 +72,9 @@ class SignIn extends React.Component {
                             </label>
                             {this.renderErrors()}
                             <br/>
-                            <button>Submit</button>
-                        <p>Sign up for free! <button><Link to="/signup">Sign Up</Link></button></p>
-                        <p>Just exploring? Hit the trail as a <button onClick={this.demo}>demo user</button></p>
+                            <button className="prime">Submit</button>
+                        <p>Sign up for free!  <Link className="inline-link" to="/signup">Sign Up</Link></p>
+                        <p>Hit the trail as a<button className="inline-link" onClick={this.demo}>demo user</button></p>
                         </form>
                     
                 </div>

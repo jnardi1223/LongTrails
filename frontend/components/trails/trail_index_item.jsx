@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const TrailItem = ({trail, park}) => {
     return (
         <Link to={`/trail/${trail.id}`} className="trail-item"> 
-            <img src={trail.img_url}/>
+            <img className="index" src={trail.img_url}/>
             <div className="trail-item-content">
                 <h2>{trail.trail_name}</h2>
                 <div>{park.park_name}</div>

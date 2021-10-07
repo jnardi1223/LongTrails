@@ -50,7 +50,7 @@ class SignUp extends React.Component {
                         <form onSubmit={this.handleSubmit}>
                         <h2>{this.props.formType}</h2>
                             <label>First Name
-                                <input 
+                                <input className="text-field"
                                     type="text" 
                                     value={this.state.first_name} 
                                     onChange={this.handleInput("first_name")}
@@ -81,10 +81,10 @@ class SignUp extends React.Component {
                                 />
                             </label>
                             <br/>
-                            <button>Submit</button>
+                            <button className="prime">Submit</button>
                             
                             {this.renderErrors()}
-                        <p>Already have an account? <button><Link to="/signin">Sign In</Link></button></p>
+                        <p>Already have an account?<Link className="inline-link" to="/signin"> Sign In</Link></p>
                         </form>
                 </div>
              </div>

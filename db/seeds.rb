@@ -23,7 +23,7 @@ park_1 = Park.create!(park_name: "Hubbard Park",
                      higest_elevation: 1020,
                      lat: 41.5482,
                      long: -72.8361,
-                     img_url: "https://cdn-assets.alltrails.com/uploads/photo/image/19227837/large_5719c3b518d4573205f3f21d9aba4839.jpg"
+                     img_url: "https://www.aerialviewphotographs.com/uploads/9/8/1/7/98172320/avp-castle-craig-may-2020-0691-memorial-at-castle-craig_orig.jpg"
                     )
 
 park_2 = Park.create!(park_name: "Bear Mountain Reservation",
@@ -69,7 +69,8 @@ trail_2 = Trail.create!(trail_name: "Bear Mountain red, white, and yellow loop",
                        route_type: "loop",
                        park_id: park_2.id,
                        lat: 42.0448,
-                       long: -73.4548 
+                       long: -73.4548,
+                       img_url: "https://media-cdn.tripadvisor.com/media/photo-s/1c/0b/74/40/signs.jpg"
                     )
 
 trail_3 = Trail.create!(trail_name: "Bear Mountain red and green loop",
@@ -80,7 +81,8 @@ trail_3 = Trail.create!(trail_name: "Bear Mountain red and green loop",
                        route_type: "loop",
                        park_id: park_2.id,
                        lat: 42.0448,
-                       long: -73.4548 
+                       long: -73.4548,
+                       img_url: "https://visitbearmountain.com/wp-content/uploads/sites/41/2017/07/iona-2-800x570.jpg"
                     )
 
 trail_4 = Trail.create!(trail_name: "Lye Brook Falls Trail",
