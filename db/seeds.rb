@@ -55,7 +55,7 @@ trail_1 = Trail.create!(trail_name: "Castle Craig",
                        lat: 41.5566,
                        long: -72.8355 
 
-                    )
+                    ); 
 
 trail_2 = Trail.create!(trail_name: "Bear Mountain red, white, and yellow loop",
                        summary: "Bear Mountain via Red, White, and Yellow Trails Loop is a 2.2 mile lightly trafficked loop trail located near Danbury, Connecticut that features beautiful wild flowers and is rated as moderate. The trail offers a number of activity options and is accessible year-round. Dogs are also able to use this trail but must be kept on leash.",

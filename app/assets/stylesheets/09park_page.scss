@@ -1,0 +1,31 @@
+.park-page {
+    padding: 0 15px;
+    max-width: 1024px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 32px;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #414141;
+    font-weight: 600;
+    margin: 16px 0 0;
+    padding-bottom: 8px;
+}
+
+h2 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 16px;
+    color: #414141;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+.park-description {
+    p {
+        font-family: "Work Sans", Helvetica, sans-serif;
+        color: gray;
+        font-weight: 375;
+        // max-width: 763px;
+    }
+}

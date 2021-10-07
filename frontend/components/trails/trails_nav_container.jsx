@@ -2,12 +2,13 @@ import {connect} from "react-redux"
 import TrailsNav from "./trails_nav"
 import { receiveTrail } from "../../actions/trails";
 
-// const mapStateToProps = (state, ownProps) => {
-//     return ({
-//         trail: state.entities.trails[ownProps.match.params.trailId]
-//     })
-// }; 
-// console.log(state); 
+const mapStateToProps = (state, ownProps) => {
+    console.log
+    return ({
+        
+    })
+}; 
+
 
 const mapDispatchToProps = dispatch => {
     return ({
@@ -17,4 +18,4 @@ const mapDispatchToProps = dispatch => {
 
 
 
-export default connect(null, mapDispatchToProps)(TrailsNav); 
+export default connect(mapStateToProps, mapDispatchToProps)(TrailsNav); 

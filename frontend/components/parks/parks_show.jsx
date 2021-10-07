@@ -1,6 +1,7 @@
 import React from "react";
-import TrailsNav from "../trails/trails_nav_container"
+import TrailsNavContainer from "../trails/trails_nav_container"
 import TrailIndex from "../trails/trail_index"
+import ParkMap from "../map/map"
 // import parks_show_container from "./parks_show_container";
 // console.log("parksShow")
 class ParksShow extends React.Component {
@@ -25,10 +26,19 @@ class ParksShow extends React.Component {
         const {park, trails} = this.props
         // console.log(this.props.park)
         return (
-            <div>
-                < TrailsNav />
-                Parks Page 
-               
+            <div className="park-page">
+                <div className="bread-crumbs">
+                    <p>United States</p>   {">"}
+                    {park.id === 6 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
+                    <p>Park name and link to that park</p>
+                    <TrailsNavContainer/>
+                </div>
+                <div className="park-description">
+                    <h1>{park.park_name}</h1> 
+                    <h2>Description</h2>
+                    <p>{park.description}</p>
+                    {/* <ParkMap lng={park.long} lat={park.lat}/> */}
+                </div>
                <div>
                  < TrailIndex park={park} trails={trails}/> 
                </div>

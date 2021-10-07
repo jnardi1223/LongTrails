@@ -10,6 +10,10 @@ const Home = ({currentUser}) => {
             <div className="homepage-text">
               Find your next adventure
               <SearchContainer />
+
+            </div>
+            <div>
+
             </div>
         </div>
     )
