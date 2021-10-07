@@ -5,6 +5,13 @@ export const fetchPark = parkId => {
         method: "GET"
     })
 };
+export const fetchParks = () => {
+    // console.log("util")
+    return $.ajax({
+        url: '/api/parks',
+        method: "GET"
+    })
+};
 
 
 export const fetchParkTrails = parkId => (

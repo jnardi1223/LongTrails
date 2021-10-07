@@ -35,7 +35,7 @@ park_2 = Park.create!(park_name: "Bear Mountain Reservation",
                     )
 park_3 = Park.create!(park_name: "Green Mountain National Forest",
                      state: "Vermont",
-                     town: "-",
+                     town: "Rutland",
                      description: "The Green Mountain National Forest is managed by the United States Department of Agriculture Forest Service. Located in Rutland Vermont, the park contains portions of both the Long Trail and the Appalachian Trail as well as other popular peaks and trails. The park is a popular destination in New England for hiking, horseback riding, and mountain biking.",
                      park_type: "National",
                      higest_elevation: 4068,

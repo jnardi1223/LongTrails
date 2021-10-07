@@ -29,8 +29,8 @@ class ParksShow extends React.Component {
             <div className="park-page">
                 <div className="bread-crumbs">
                     <p>United States</p>   {">"}
-                    {park.id === 6 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
-                    <p>Park name and link to that park</p>
+                    {park.id === 12 ? <p>Vermont</p> : <p>Connecticut</p> }   {">"}
+                    <p>{park.park_name}</p>
                     <TrailsNavContainer/>
                 </div>
                 <div className="park-description">

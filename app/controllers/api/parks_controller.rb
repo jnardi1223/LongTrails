@@ -5,4 +5,8 @@ class Api::ParksController < ApplicationController
         render :show
     end
 
+    def index 
+        @parks = Park.all
+    end 
+
 end

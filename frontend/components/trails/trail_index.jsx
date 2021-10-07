@@ -2,7 +2,7 @@ import React from 'react'
 import TrailIndexItem from './trail_index_item'
 
 const TrailIndex = ({park, trails}) => {
-    console.log(trails)
+    // console.log(trails)
     return (
         <div>
             <ul className="trail-index">

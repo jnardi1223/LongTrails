@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const TrailIndexItem = ({trail, park}) => {
+const TrailItem = ({trail, park}) => {
     return (
         <Link to={`/trail/${trail.id}`} className="trail-item"> 
             <div className="image">{trail.coverPhoto}</div>
@@ -27,4 +27,4 @@ const TrailIndexItem = ({trail, park}) => {
     )
 }
 
-export default TrailIndexItem
+export default TrailItem
