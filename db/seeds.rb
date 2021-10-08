@@ -43,7 +43,7 @@ park_3 = Park.create!(park_name: "Green Mountain National Forest",
                      park_type: "National",
                      higest_elevation: 4068,
                      lat: 43.0548,
-                     long: -729996,
+                     long: -72.9996,
                      img_url: "https://peakvisor.com/img/news/Green-Mountains-National-Forest1.jpg"
                   )
 

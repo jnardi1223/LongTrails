@@ -10,7 +10,7 @@ class ParkMap extends React.Component {
             this.state = {
                 lng: this.props.park.long,
                 lat: this.props.park.lat,
-                zoom: 13
+                zoom: 10
             }
         this.mapContainer = React.createRef();
     }

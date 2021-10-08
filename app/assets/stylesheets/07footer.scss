@@ -4,9 +4,12 @@ footer {
     background-color: #E6E6E6;
     height: 200px;
 
-        a {
-            color: green;
-        }
+
+}
+
+.fas-faCampground-fa-lg {
+    color: green;
+    // font-size: 60px;
 }
 
 .footer-content {
@@ -28,9 +31,18 @@ footer {
     color: #808080;
     font-size: 40px;
     font-weight: 500;
+
+    a {
+        flex-direction: row;
+        display: flex;
+        align-items: baseline; 
+    }
 }
 
-.link {
-    display: flex;
-    align-items: center;
+.links {
+    a {
+    padding: 15px;
+    padding-bottom: 0;
+    block-size: 60px;
+    }
 }
