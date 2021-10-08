@@ -1,7 +1,7 @@
 import React from "react";
 import TrailsNavContainer from "../trails/trails_nav_container"
 import TrailIndex from "../trails/trail_index"
-import ParkMap from "../map/map"
+import ParkMap from "../map/park_map"
 // import parks_show_container from "./parks_show_container";
 // console.log("parksShow")
 class ParksShow extends React.Component {
@@ -37,10 +37,12 @@ class ParksShow extends React.Component {
                     <img src={park.img_url}/>
                 </div>
                 <div className="park-description">
-                    <h1>{park.park_name}</h1> 
-                    <h2>Description</h2>
-                    <p>{park.description}</p>
-                    {/* <ParkMap lng={park.long} lat={park.lat}/> */}
+                    <div className="park-info">
+                        <h1>{park.park_name}</h1> 
+                        <h2>Description</h2>
+                        <p>{park.description}</p>
+                    </div>
+                    <ParkMap className="park-map" park={park}/>
                 </div>
                <div>
                  < TrailIndex park={park} trails={trails}/> 

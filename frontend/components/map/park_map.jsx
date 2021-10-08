@@ -6,11 +6,12 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoiam5hcmRpMTIyMyIsImEiOiJja3VkZXBpMDAxOXJuMzFue
 class ParkMap extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            lng: this.props.trail.long,
-            lat: this.props.trail.lat,
-            zoom: 13
-        }
+        // if ()
+            this.state = {
+                lng: this.props.park.long,
+                lat: this.props.park.lat,
+                zoom: 13
+            }
         this.mapContainer = React.createRef();
     }
 
@@ -28,7 +29,7 @@ componentDidMount() {
 render () {
     return (
         <div>
-            <div ref={el => this.mapContainer = el} style={{width:'100%', height:'50vh'}}/>
+            <div ref={el => this.mapContainer = el} style={{width:'70%', height:'30vh'}}/>
          </div>
         )
     }
