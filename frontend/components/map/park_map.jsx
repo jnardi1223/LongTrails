@@ -29,7 +29,7 @@ componentDidMount() {
 render () {
     return (
         <div>
-            <div ref={el => this.mapContainer = el} style={{width:'70%', height:'30vh'}}/>
+            <div ref={el => this.mapContainer = el} style={{width:'100%', height:'30vh'}}/>
          </div>
         )
     }
