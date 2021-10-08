@@ -3,9 +3,9 @@ footer {
     align-items: center;
     background-color: #E6E6E6;
     height: 200px;
-
-
 }
+
+
 
 .fas-faCampground-fa-lg {
     color: green;
@@ -18,7 +18,7 @@ footer {
     flex-direction: row;
     align-items: flex-end;
     padding-bottom: 3vh;
-    width: 100vw;
+    width: 70vw;
 }
 
 .footer-logo {
@@ -45,4 +45,12 @@ footer {
     padding-bottom: 0;
     block-size: 60px;
     }
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: 50px;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
 }
