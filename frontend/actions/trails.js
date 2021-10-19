@@ -1,7 +1,7 @@
 import * as TrailApiUtil from "../util/trail_utils";
 
 export const RECEIVE_TRAIL = "RECEIVE_TRAIL";
-export const CLEAR_TRAILS = "RECEIVE_TRAIL";
+// export const CLEAR_TRAILS = "RECEIVE_TRAIL";
 
 // console.log("action")
 const receiveCurrentTrail = trail => ({
@@ -15,6 +15,6 @@ export const receiveTrail = trailId => dispatch => {
         .then(trail => dispatch(receiveCurrentTrail(trail)))
 }
 
-export const clearTrails = () => dispatch => {
-    return dispatch(removeTrails());
-}
+// export const clearTrails = () => dispatch => {
+//     return dispatch(removeTrails());
+// }

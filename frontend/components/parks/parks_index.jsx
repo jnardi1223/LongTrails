@@ -1,5 +1,5 @@
 import React from "react";
-import ParkItem from "./park_item"
+import ParkItem from "../parks/park_item"
 
 const ParksIndex = ({parks}) => {
     return (

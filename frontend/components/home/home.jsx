@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import SearchContainer from './search_bar';
-import Parks from "./parks_index"
+import Parks from "../parks/parks_index"
 
 
 // const Home = ({currentUser}) => {
@@ -41,7 +41,7 @@ class Home extends React.Component {
                 <div className="homepage">
                     <div className="homepage-text">
                     Find your next adventure
-                    {/* <SearchContainer /> */}
+                    <SearchContainer />
                     </div>
                 </div>
                 <div>

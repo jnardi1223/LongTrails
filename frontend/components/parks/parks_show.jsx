@@ -33,7 +33,7 @@ class ParksShow extends React.Component {
                 <div className="bread-crumbs">
                     <p>United States</p>   {">"}
                     <p>{park.state}</p>   
-                    {/* <TrailsNavContainer/> */}
+                    <TrailsNavContainer/>
                 </div>
                 <div className="title-photo-box">
                     <img src={park.img_url}/>

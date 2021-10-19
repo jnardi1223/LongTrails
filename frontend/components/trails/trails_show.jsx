@@ -40,7 +40,7 @@ class TrailsShow extends React.Component {
                     <p>{park.state}</p>  {">"}
                     <Link to={`/park/${park.id}`}><p>{park.park_name}</p></Link>
                 </div>
-                {/* <TrailsNavContainer />  */}
+                <TrailsNavContainer /> 
             </div>
                 
             <div className="trail-title">
