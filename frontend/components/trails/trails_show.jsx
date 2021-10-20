@@ -13,6 +13,7 @@ class TrailsShow extends React.Component {
 
     componentDidMount() {
         this.props.receiveTrail(this.props.match.params.trailId)
+        window.scrollTo(0, 0)
     };
 
     componentDidUpdate(prevProp) {

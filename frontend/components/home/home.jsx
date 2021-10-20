@@ -29,7 +29,12 @@ class Home extends React.Component {
 
     componentDidMount() {
         this.props.receiveAllParks()
+        window.scrollTo(0, 0)
     }
+
+    // componentDidMount() {
+    //     window.scrollTo(0, 0)
+    //   }
 
     render() {
         if (!this.props.parks) {
@@ -41,7 +46,7 @@ class Home extends React.Component {
                 <div className="homepage">
                     <div className="homepage-text">
                     Find your next adventure
-                    <SearchContainer />
+                    {/* <SearchContainer /> */}
                     </div>
                 </div>
                 <div>
