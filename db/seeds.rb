@@ -157,8 +157,8 @@ trail_8 = Trail.create!(trail_name: "Mount Abraham",
                        img_url_2: "https://www.vermontvacation.com/~/media/images/rotator%20images/summer/hiking-in-stowe-view-from-summit.ashx"
                     )
 
-review_1 = Review.create(rating: 5, review: "This hike was amazing! The view fromt he top of castle craig is incredible", hike_date: "2021-08-15", post_date: "2021-8-16", user_id: user_1.id, trail_id: trail_1.id)
-review_2 = Review.create(rating: 3, review: "The hike was nice but there was so many peopel at every point", hike_date: "2020-04-11", user_id: user_2.id, post_date: "2021-04-16", trail_id: trail_2.id)
-review_3 = Review.create(rating: 4, review: "Great hike but a little too step for my dog at times.", hike_date: "2020-08-29", user_id: user_3.id, post_date: "2021-08-30", trail_id: trail_3.id)
+review_1 = Review.create(rating: 5, review: "This hike was amazing! The view fromt he top of castle craig is incredible", hike_date: "2021-08-15", user_id: user_1.id, trail_id: trail_1.id)
+review_2 = Review.create(rating: 3, review: "The hike was nice but there was so many peopel at every point", hike_date: "2016-04-11", user_id: user_2.id, trail_id: trail_2.id)
+review_3 = Review.create(rating: 4, review: "Great hike but a little too step for my dog at times.", hike_date: "2020-08-29", user_id: user_3.id, trail_id: trail_3.id)
 
 
