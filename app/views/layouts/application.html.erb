@@ -4,12 +4,14 @@
     <title>Long Trails</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta property="og:title" content="AllTrails Clone"/>
+    <meta property='og:image' content="<%= image_url('LT_link.jpeg') %>"/>
+    <meta property="og:description" content="LongTrails is a clone of AllTrails using Ruby On Rails and React. It has functioning User Authentication and will have Create/Read/Update/Delete functionality on Review and Trail once production is finished."/>
+    <meta property="og:url" content="https://long-trails-staging.herokuapp.com/#/"/>
     <link rel="icon" type="image/x-icon" href="<%= image_url('favicon.png') %>" />
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
-    <!-- <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCycpe2tPcegB9oMgXZZnGjZJFCKaqaJmI"></script> -->
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
     <% if current_user %>
       <script>
         window.currentUser = { 
