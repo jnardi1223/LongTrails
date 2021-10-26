@@ -156,7 +156,7 @@ trail_8 = Trail.create!(trail_name: "Mount Abraham",
                        img_url: "https://lh3.googleusercontent.com/proxy/AKfTzDe3Yg6iI1D4Hw0bpBYlg9DfYjss8b9Of_D9XqKv2haGZmIJKSGQ8InYIOpZZz985WrrLkcKSWzFLOLrvHbQWQ",
                        img_url_2: "https://www.vermontvacation.com/~/media/images/rotator%20images/summer/hiking-in-stowe-view-from-summit.ashx"
                     )
-
+Review.destroy_all
 review_1 = Review.create(rating: 5, 
                         review: "This hike was amazing! The view fromt he top of castle craig is incredible", 
                         hike_date: "2021-08-15", 
@@ -164,7 +164,7 @@ review_1 = Review.create(rating: 5,
                         user_id: user_1.id, 
                         trail_id: trail_1.id)
 review_2 = Review.create(rating: 3, 
-                        review: "The hike was nice but there was so many peopel at every point", 
+                        review: "The hike was nice but there was so many people at every point", 
                         hike_date: "2020-04-11", 
                         user_id: user_2.id, 
                         post_date: "2021-04-16", 

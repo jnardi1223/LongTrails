@@ -22,4 +22,6 @@ class Review < ApplicationRecord
     belongs_to :trail,
         foreign_key: :trail_id,
         class_name: :Trail
+
+   
 end

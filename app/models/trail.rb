@@ -19,7 +19,9 @@ class Trail < ApplicationRecord
     validates :route_type, inclusion: { in: ["Out & back", "loop", "Point to point"]}
     
 
-    has_many :reviews
+    has_many :reviews,
+        foreign_key: :trail_id,
+        class_name: :Review
 
     has_many :reviewers,
         through: :reviews, 
@@ -28,5 +30,8 @@ class Trail < ApplicationRecord
 
     belongs_to :park
 
+    def avg_review
+        reviews.average(:rating).round(2).to_f
+    end 
 
 end

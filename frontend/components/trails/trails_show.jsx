@@ -90,16 +90,19 @@ class TrailsShow extends React.Component {
                     <div className="trail-summary1">
                         <p>{trail.summary}</p>
                     </div>
-                    {/* <div className="tab">
+                    <div className="tab">
                         <p>Reviews</p>
-                    </div> */}
+                        {/* <form>
+
+                        </form> */}
+                    </div>
 
                 </div>
                 <div className="right-side">
                     <div className="map">
                         <Map trail={trail}/>
                     </div>
-                    {/* <div className="nearby-trails">Nearby Trails</div> */}
+                    <div className="nearby-trails">Nearby Trails</div>
                 </div>
                
             </div>
