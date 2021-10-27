@@ -43,3 +43,15 @@
     padding-top: 10px;
     padding-bottom: 15px;
 }
+
+.star-date {
+    margin-top: 3px;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    align-items: center;
+}
+
+.date {
+    padding-left: 10px;
+}
