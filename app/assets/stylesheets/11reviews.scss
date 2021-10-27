@@ -1,0 +1,45 @@
+.review-item { 
+    border-bottom: 1px solid #e2e2e2;
+    padding: 20px 0;
+    margin: 0 24px;
+    font-family: "Work Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.44;
+    color: #646255;
+    font-weight: 375;
+}
+
+.review-pic-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E6E6E6;
+    color: #808080;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
+}
+
+.svg-inline--fa.fa-w-12 {
+    width: 0.45em;
+}
+
+.reviewer-name{
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #414141;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.38;
+}
+
+.review-text { 
+    padding-top: 10px;
+    padding-bottom: 15px;
+}

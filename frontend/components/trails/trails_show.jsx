@@ -4,15 +4,16 @@ import Map from "../map/trail_map";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoute } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Reviews from "../reviews/reviews_index"
 
 class TrailsShow extends React.Component {
     constructor(props) {
         super(props); 
-        
     };
 
     componentDidMount() {
-        this.props.receiveTrail(this.props.match.params.trailId)
+        this.props.receiveTrail(this.props.match.params.trailId),
+        this.props.fetchReviews();
         window.scrollTo(0, 0)
     };
 
@@ -24,14 +25,16 @@ class TrailsShow extends React.Component {
 
 
     render() { 
+       
         if (!this.props.trail) {
             return null
         };
-        // if (!this.props.park) {
+        // if (!this.props.reviews) {
         //     return null
         // };
 
-        const {trail, park} = this.props;
+        const {trail, park, reviews} = this.props;
+        console.log(reviews)
         return (
         <div className="trail-page-background">
              
@@ -92,9 +95,9 @@ class TrailsShow extends React.Component {
                     </div>
                     <div className="tab">
                         <p>Reviews</p>
-                        {/* <form>
-
-                        </form> */}
+                    </div>
+                    <div className="trail-reviews">
+                        <Reviews trail={trail} reviews={reviews}/>
                     </div>
 
                 </div>
@@ -102,7 +105,7 @@ class TrailsShow extends React.Component {
                     <div className="map">
                         <Map trail={trail}/>
                     </div>
-                    <div className="nearby-trails">Nearby Trails</div>
+                    {/* <div className="nearby-trails">Nearby Trails</div> */}
                 </div>
                
             </div>

@@ -20,7 +20,7 @@ class SignIn extends React.Component {
     renderErrors() {
         return (
             <ul>
-                {this.props.errors.map((error, idx) => <li key={idx}>{error}</li>)}
+                {this.props.errors.map((error, idx) => <li key={error.id}>{error}</li>)}
             </ul>
         )
     }

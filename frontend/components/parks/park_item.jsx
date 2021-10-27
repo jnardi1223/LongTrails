@@ -1,6 +1,6 @@
 import React from "react"; 
 import { Link } from "react-router-dom"
-
+// getting its props from the home container right now
 const ParkItem = ({park}) => {
     return (
         <Link to={`/park/${park.id}`} className ="trail-item">
