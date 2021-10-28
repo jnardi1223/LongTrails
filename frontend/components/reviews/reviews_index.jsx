@@ -11,7 +11,7 @@ const Reviews = ({trail, reviews}) => {
         <div>
             <ul>
                 {sortedReviews.map((review, idx) => {
-                    console.log(review.id)
+                    // console.log(review.id)
                     return (<div key={review.id} >
                         <ReviewItem review={review} idx={idx}/>
                         {/* passing each filtered review to the reviewItem container */}

@@ -3,7 +3,7 @@ import TrailsNav from "./trails_nav"
 import { receiveTrail } from "../../actions/trails";
 
 const mapStateToProps = (state, ownProps) => {
-    console.log
+    // console.log
     return ({
         
     })

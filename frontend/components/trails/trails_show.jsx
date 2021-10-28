@@ -5,10 +5,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoute } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Reviews from "../reviews/reviews_index"
+import ReviewForm from "../reviews/review_form_container"
 
 class TrailsShow extends React.Component {
     constructor(props) {
-        super(props); 
+        super(props);
+        this.state = {
+            reviewForm: false,
+            editForm: false,
+        } 
+        this.showReviewForm = this.showReviewForm.bind(this)
+        // this.showEditForm = this.showEditForm.bind(this)
+        this.rerenderParentCallback = this.rerenderParentCallback.bind(this);
     };
 
     componentDidMount() {
@@ -23,6 +31,13 @@ class TrailsShow extends React.Component {
         }
     };
 
+    showReviewForm() {
+        this.setState({reviewForm: !this.state.reviewForm})
+    }
+
+    rerenderParentCallback() {
+        this.forceUpdate();
+    }
 
     render() { 
        
@@ -33,8 +48,15 @@ class TrailsShow extends React.Component {
         //     return null
         // };
 
-        const {trail, park, reviews} = this.props;
-        console.log(reviews)
+        const {trail, park, reviews, currentUser} = this.props;
+
+        const writeReview = (currentUser ? (
+            <div>
+            <span className="write-review-button" onClick={this.showReviewForm}>Write review</span>
+                {this.state.reviewForm ? (<ReviewForm hideReviewForm={this.showReviewForm} trailId={trail.id} />) : null }
+            </div>
+         ) : null)
+        // console.log(trail.id)
         return (
         <div className="trail-page-background">
              
@@ -96,8 +118,11 @@ class TrailsShow extends React.Component {
                     <div className="tab">
                         <p>Reviews</p>
                     </div>
+                    <div>
+                        {writeReview}
+                    </div>
                     <div className="trail-reviews">
-                        <Reviews trail={trail} reviews={reviews}/>
+                        <Reviews trail={trail} reviews={reviews} currentUser={currentUser}/>
                     </div>
 
                 </div>

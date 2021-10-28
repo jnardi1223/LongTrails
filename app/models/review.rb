@@ -13,7 +13,7 @@
 #  updated_at :datetime         not null
 #
 class Review < ApplicationRecord
-    validates :rating, :review, :hike_date, :post_date, presence: true
+    validates :rating, :review, :hike_date, presence: true
 
     belongs_to :reviewer,
         foreign_key: :user_id,
@@ -22,6 +22,4 @@ class Review < ApplicationRecord
     belongs_to :trail,
         foreign_key: :trail_id,
         class_name: :Trail
-
-   
 end

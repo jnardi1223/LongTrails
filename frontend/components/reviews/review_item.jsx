@@ -1,7 +1,7 @@
 import React from "react"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMountain, faHiking } from "@fortawesome/free-solid-svg-icons";
-import ReactStars from 'react-stars'
+import { faHiking } from "@fortawesome/free-solid-svg-icons";
+import ReactStars from "react-rating-stars-component"
 
 const ReviewItem = ({review}) => {
     

@@ -55,3 +55,59 @@
 .date {
     padding-left: 10px;
 }
+
+// ReviewFrom //
+
+.rating-select {
+    display: flex;
+    flex-direction: row;
+}
+
+.review-form [type="date"] {
+    width: 35%;
+    height: 50px;
+    font-family: "Work Sans", Helvetica, sans-serif;
+    padding: 8px;
+    color: #808080;
+    font-size: 14px;
+    line-height: 1.38;
+}
+
+.review-form textarea {
+    height: 200px;
+    padding: 8px;
+    font-family: "Work Sans", Helvetica, sans-serif;
+    color: #808080;
+    font-size: 14px;
+    line-height: 1.38;
+}
+
+.text-input {
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    cursor: text;
+    width: 100%;
+}
+
+
+.review-form {
+    width: 75%; 
+    margin: auto
+}
+
+.write-review-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 15px;
+    width: 188px;
+    height: 40px;
+    border-radius: 8px;
+    margin: 35px auto;
+    background-color: #468A13;
+    border: 2px solid #468A13;
+    color: white;
+    font-family: "Montserrat", Arial, sans-serif;
+}
