@@ -1,7 +1,7 @@
 import {connect} from "react-redux"
 import TrailsShow from "./trails_show"
 import { receiveTrail } from "../../actions/trails";
-import { fetchReviews } from "../../actions/reviews";
+import { fetchReviews, deleteReview } from "../../actions/reviews";
 
 const mapStateToProps = (state, ownProps) => {
     // console.log(state)
@@ -21,7 +21,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return ({
     receiveTrail: trailId => dispatch(receiveTrail(trailId)),
-    fetchReviews: () => dispatch(fetchReviews()) 
+    fetchReviews: () => dispatch(fetchReviews()), 
+    deleteReview: id => dispatch(deleteReview(id)),
+    updateReview: reviewId => dispatch(updateReview(reviewId))
     })
 }; 
 

@@ -4,15 +4,15 @@ import {createReview} from '../../actions/reviews'
 
 const mapStateToProps = (state, ownProps) => {
     
-    // console.log(state.entities.users[state.session.id])
-    console.log(ownProps)
+    // console.log(state.entities.users[state.session.id].id)
+    // console.log(ownProps)
 
     return {
         initialState: {
             rating: 5,
             review: "",
             hike_date: "",
-            user_id: state.entities.users[state.session.id],
+            user_id: state.entities.users[state.session.id].id,
             trail_id: ownProps.trailId
 
         },

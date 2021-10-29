@@ -48,11 +48,11 @@ class TrailsShow extends React.Component {
         //     return null
         // };
 
-        const {trail, park, reviews, currentUser} = this.props;
+        const {trail, park, reviews, currentUser, deleteReview} = this.props;
 
         const writeReview = (currentUser ? (
             <div>
-            <span className="write-review-button" onClick={this.showReviewForm}>Write review</span>
+            <div className="write-review-button" onClick={this.showReviewForm}>Write review</div>
                 {this.state.reviewForm ? (<ReviewForm hideReviewForm={this.showReviewForm} trailId={trail.id} />) : null }
             </div>
          ) : null)
@@ -119,10 +119,16 @@ class TrailsShow extends React.Component {
                         <p>Reviews</p>
                     </div>
                     <div>
+                        {/* review form */}
                         {writeReview}
                     </div>
                     <div className="trail-reviews">
-                        <Reviews trail={trail} reviews={reviews} currentUser={currentUser}/>
+                        <Reviews 
+                            trail={trail} 
+                            reviews={reviews} 
+                            currentUser={currentUser} 
+                            deleteReview= {deleteReview}
+                        />
                     </div>
 
                 </div>
