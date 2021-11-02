@@ -22,9 +22,7 @@ class EditReviewForm extends React.Component {
         }
     }
 
-
     render() {
-
         const starOps = {
             size: 30,
             value: this.state.rating,
@@ -48,15 +46,15 @@ class EditReviewForm extends React.Component {
                             type="date"
                             className="text-input"
                             placeholder="Activity Date"
-                            value={this.state.activity_date}
-                            onChange={this.update("activity_date")}
+                            value={this.state.hike_date}
+                            onChange={this.update("hike_date")}
                             required />
                         <p>Review</p>
                         <textarea
                             className="text-input review-text"
                             placeholder="Share your thoughts about the trail so others know what to expect"
-                            value={this.state.review_text}
-                            onChange={this.update("review_text")}
+                            value={this.state.review}
+                            onChange={this.update("review")}
                             required />
                         <button className="write-review-button">Update Review</button>
                     </form>
@@ -67,3 +65,4 @@ class EditReviewForm extends React.Component {
 }
 
 export default EditReviewForm
+

@@ -15,7 +15,7 @@ class TrailsShow extends React.Component {
             editForm: false,
         } 
         this.showReviewForm = this.showReviewForm.bind(this)
-        // this.showEditForm = this.showEditForm.bind(this)
+        this.showEditForm = this.showEditForm.bind(this)
         this.rerenderParentCallback = this.rerenderParentCallback.bind(this);
     };
 
@@ -30,9 +30,13 @@ class TrailsShow extends React.Component {
             this.props.receiveTrail(this.props.match.params.trailId);
         }
     };
-
+    // uses bang because it cannot show on initial render, then allows toggle 
     showReviewForm() {
         this.setState({reviewForm: !this.state.reviewForm})
+    }
+
+    showEditForm() {
+        this.setState({editForm: !this.state.editForm})
     }
 
     rerenderParentCallback() {
@@ -48,7 +52,7 @@ class TrailsShow extends React.Component {
         //     return null
         // };
 
-        const {trail, park, reviews, currentUser, deleteReview} = this.props;
+        const {trail, park, reviews, currentUser, deleteReview, updateReview} = this.props;
 
         const writeReview = (currentUser ? (
             <div>
@@ -56,7 +60,7 @@ class TrailsShow extends React.Component {
                 {this.state.reviewForm ? (<ReviewForm hideReviewForm={this.showReviewForm} trailId={trail.id} />) : null }
             </div>
          ) : null)
-        // console.log(trail.id)
+        
         return (
         <div className="trail-page-background">
              
@@ -66,7 +70,7 @@ class TrailsShow extends React.Component {
                     <p>{park.state}</p>  {">"}
                     <Link to={`/park/${park.id}`}><p>{park.park_name}</p></Link>
                 </div>
-                {/* <TrailsNavContainer />  */}
+                <TrailsNavContainer /> 
             </div>
                 
             <div className="trail-title">
@@ -127,7 +131,11 @@ class TrailsShow extends React.Component {
                             trail={trail} 
                             reviews={reviews} 
                             currentUser={currentUser} 
-                            deleteReview= {deleteReview}
+                            deleteReview={deleteReview}
+                            updateReview={updateReview}
+                            showEditForm={this.showEditForm} 
+                            editForm={this.state.editForm}
+                            rerenderParentCallback={this.rerenderParentCallback}
                         />
                     </div>
 

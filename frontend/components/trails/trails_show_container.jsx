@@ -1,12 +1,10 @@
 import {connect} from "react-redux"
 import TrailsShow from "./trails_show"
 import { receiveTrail } from "../../actions/trails";
-import { fetchReviews, deleteReview } from "../../actions/reviews";
+import { fetchReviews, deleteReview, updateReview } from "../../actions/reviews";
 
 const mapStateToProps = (state, ownProps) => {
-    // console.log(state)
-    // console.log(ownProps)
-    // console.log(state.entities.reviews)
+    
     if (!state.entities.trails[ownProps.match.params.trailId]) {
         return {}; 
     }
@@ -23,7 +21,7 @@ const mapDispatchToProps = dispatch => {
     receiveTrail: trailId => dispatch(receiveTrail(trailId)),
     fetchReviews: () => dispatch(fetchReviews()), 
     deleteReview: id => dispatch(deleteReview(id)),
-    updateReview: reviewId => dispatch(updateReview(reviewId))
+    updateReview: review => dispatch(updateReview(review))
     })
 }; 
 

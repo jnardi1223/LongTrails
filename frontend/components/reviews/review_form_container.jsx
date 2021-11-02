@@ -3,10 +3,6 @@ import ReviewForm from './review_form';
 import {createReview} from '../../actions/reviews'
 
 const mapStateToProps = (state, ownProps) => {
-    
-    // console.log(state.entities.users[state.session.id].id)
-    // console.log(ownProps)
-
     return {
         initialState: {
             rating: 5,
@@ -26,4 +22,3 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm)
-// export default connect(null,null)(ReviewForm)
