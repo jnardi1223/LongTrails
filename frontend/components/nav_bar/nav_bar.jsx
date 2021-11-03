@@ -30,8 +30,10 @@ const Nav = ({ user, signOut }) => {
                 {logo}
                 <div>
                     <p className="users-name">Hello, {user.first_name}</p>
+                    <button className="sign-out-button" onClick={signOut}>Sign Out</button>
+                    {/* <p className="users-name">Hello, {user.first_name}</p>
+                    <button className="sign-out-button" onClick={signOut}>Sign Out</button> */}
                 </div>
-                <button className="sign-out-button" onClick={signOut}>Sign Out</button>
             </div>
         )
     } else {

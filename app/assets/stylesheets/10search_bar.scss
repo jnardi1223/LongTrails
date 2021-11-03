@@ -1,16 +1,295 @@
-button {
-    background-color: transparent;
-    border-color: transparent;
-    // background-color: #468A13;
-    // border: 1px solid #468A13;
-    padding: 10px 10px;
-    // border-top-right-radius: 8px;
-    // border-bottom-right-radius: 8px;
-    cursor: pointer;
+// button {
+//     background-color: transparent;
+//     border-color: transparent;
+//     // background-color: #468A13;
+//     // border: 1px solid #468A13;
+//     padding: 10px 10px;
+//     // border-top-right-radius: 8px;
+//     // border-bottom-right-radius: 8px;
+//     cursor: pointer;
+// }
+
+
+// .inline-link {
+//     color: #468A13;
+//     font-weight: 600;
+// }
+
+@import "./12variable.scss";
+
+
+.search-bar {
+    width: 70%;
+    margin: 40px auto;
+    font-size:  24px;
+    margin-bottom: 0;
+    z-index: 1;
 }
 
 
-.inline-link {
-    color: #468A13;
-    font-weight: 600;
+.search-input {
+    display: flex;
+    justify-content: left;
+    background-color: white;
+    background-clip: padding-box;
+    border-radius: 20px;
+
+    input {
+        width: 100%;
+        color: $lighterGrey;
+        text-align: left;
+    }   
+
+    input::placeholder {
+        color: $lighterGrey;
+
+    }
+
+    button {
+        background-color: $buttonGreen;
+        color: white;
+        font-size: 70%;
+        padding: 20px 30px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: $buttonHoverGreen;
+    }
+
+    svg {
+        color: $lighterGrey;
+        padding: 25px;
+        cursor: text;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    path {
+        width: 10px;
+    }
+}
+
+
+.search-results {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    margin-top: -30px;
+    margin: -1px auto;
+    padding-top: 10px;
+    padding-bottom: 0;
+    z-index: -2;
+    background-color: #ffff;
+    border-style: solid;
+    width: 70%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: $contentBorder;
+
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        color: $darkGrey;
+        align-items: center;
+        padding: 3.5px 7px 3.5px 7px;
+        font-size: 16px;
+
+    }
+
+    li:last-child {
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+
+        div {
+            color: white;
+            // width: 33px;
+            padding: 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+
+        }
+
+    }
+
+    li:hover {
+        background-color: $buttonGreen;
+        color: white;
+        
+
+        .result-trail-icon {
+            background-color: white;
+            color: $buttonGreen;
+        }
+
+        .result-park-icon {
+            background-color: white;
+            color: $orange;
+        }
+    }
+
+    .result-park-icon {
+        background-color: $orange;
+        color: white
+    }
+
+    .result-trail-icon {
+        background-color: $buttonGreen;
+        color: white;
+    }
+
+}
+
+
+//SubNav Search
+
+.sub-search-bar {
+    position: relative;
+    width: 326px;
+    font-weight: 400;
+
+}
+
+
+.sub-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    max-width: 1024px;
+    margin: auto;
+    // padding-left: 58%;
+}
+
+.breadcrumbs{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    color:$lighterGrey;
+    font-family: $headerFont, Arial,sans-serif;
+
+
+    p {
+        padding: 5px;
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    svg {
+        padding: 5px;
+        font-size: 7px;
+    }
+}
+
+
+.sub-search-input {
+    display: flex;
+    border-radius: 8px;
+    flex-direction: row;
+    width: 326px;
+    font-family: $headerFont, Arial,sans-serif;
+    font-size: 13px;
+    border: 1px solid #e6e6e6;
+    color: #414141;
+    vertical-align: middle;
+    padding-left: 7px;
+    background-color: white;
+
+    input {
+        width: 100%;
+        color: $darkGrey;
+        text-align: left;
+    }
+
+
+    .search-icon {
+        color: white;
+        background-color: $buttonGreen;
+        border: 1px solid $buttonGreen;
+        padding: 10px 10px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        cursor: pointer;
+    }
+
+
+}
+
+
+.sub-search-results {
+    position: absolute;    
+    background-color: white;
+    width: 333px;
+    top: 113px;
+    z-index: 9999;
+    color: $darkGrey;
+    border: $contentBorder;
+    font-family: $headerFont, Arial,sans-serif;
+    font-size: 13px;
+
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        color: $darkGrey;
+        align-items: center;
+        padding: 3.5px 7px 3.5px 7px;
+        font-size: 13px;
+
+    }
+
+    a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+
+        div {
+            color: white;
+            width: 33px;
+            padding: 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+
+        }
+
+    }
+
+    li:hover {
+        background-color: $buttonGreen;
+        color: white;
+        
+
+        .result-trail-icon {
+            background-color: white;
+            color: $buttonGreen;
+        }
+
+        .result-park-icon {
+            background-color: white;
+            color: $orange;
+        }
+    }
+
+    .result-park-icon {
+        background-color: $orange;
+        color: white
+    }
+
+    .result-trail-icon {
+        background-color: $buttonGreen;
+        color: white;
+    }
 }

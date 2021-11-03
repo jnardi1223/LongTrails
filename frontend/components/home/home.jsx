@@ -1,26 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import SearchContainer from './search_bar';
+import SearchContainer from './../search/search_container';
 import Parks from "../parks/parks_index"
-
-
-// const Home = ({currentUser}) => {
-
-//     return (
-//         <div className="homepage">
-//             <div className="homepage-text">
-//               Find your next adventure
-//               <SearchContainer />
-
-//             </div>
-//             <div>
-//               {/* <TopTrailsContainer />  */}
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Home;
 
 class Home extends React.Component {
     constructor(props) {
@@ -42,7 +23,7 @@ class Home extends React.Component {
                 <div className="homepage">
                     <div className="homepage-text">
                     Find your next adventure
-                    {/* <SearchContainer /> */}
+                    <SearchContainer />
                     </div>
                 </div>
                 <div>
