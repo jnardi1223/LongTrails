@@ -5,7 +5,7 @@ const ParksIndex = ({parks}) => {
     return (
         <div className="park-page">
             <h1>Top Parks</h1>
-            <ul>
+            <ul className="park-list">
                 {parks.map((park, idx) => {
                     return <ParkItem key={park.id} idx={idx} park={park}/>
                 })}
