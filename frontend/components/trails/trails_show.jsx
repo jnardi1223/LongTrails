@@ -1,5 +1,5 @@
 import React from "react";
-import TrailsNavContainer from "./trails_nav_container";
+import SubNavContainer from "./../nav_bar/subnav_container"
 import Map from "../map/trail_map";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoute } from "@fortawesome/free-solid-svg-icons";
@@ -63,16 +63,7 @@ class TrailsShow extends React.Component {
         
         return (
         <div className="trail-page-background">
-             
-            <div className="trail-header">
-                <div className="bread-crumbs">
-                    <p>United States</p>   {">"}
-                    <p>{park.state}</p>  {">"}
-                    <Link to={`/park/${park.id}`}><p>{park.park_name}</p></Link>
-                </div>
-                <TrailsNavContainer /> 
-            </div>
-                
+             <SubNavContainer park={park}/>
             <div className="trail-title">
                 <div className="title-photo-box">
                     <img src={trail.img_url_2}/>

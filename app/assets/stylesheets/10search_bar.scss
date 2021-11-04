@@ -87,6 +87,7 @@
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     border: $contentBorder;
+    font-size: 12px;
 
 
     li {
@@ -130,22 +131,26 @@
         .result-trail-icon {
             background-color: white;
             color: $buttonGreen;
+            font-size: 12px; 
         }
 
         .result-park-icon {
             background-color: white;
             color: $orange;
+            font-size: 12px; 
         }
     }
 
     .result-park-icon {
         background-color: $orange;
-        color: white
+        color: white;
+        font-size: 12px; 
     }
 
     .result-trail-icon {
         background-color: $buttonGreen;
         color: white;
+        font-size: 12px; 
     }
 
 }
@@ -154,15 +159,15 @@
 //SubNav Search
 
 .sub-search-bar {
-    position: relative;
+    // position: relative;
     width: 326px;
     font-weight: 400;
-
 }
 
 
 .sub-nav {
     width: 100%;
+    height: 50%; 
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -198,6 +203,7 @@
     border-radius: 8px;
     flex-direction: row;
     width: 326px;
+    height: 34px; 
     font-family: $headerFont, Arial,sans-serif;
     font-size: 13px;
     border: 1px solid #e6e6e6;
@@ -221,6 +227,7 @@
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
         cursor: pointer;
+        font-size: 12px; 
     }
 
 
@@ -231,7 +238,6 @@
     position: absolute;    
     background-color: white;
     width: 333px;
-    top: 113px;
     z-index: 9999;
     color: $darkGrey;
     border: $contentBorder;
@@ -285,11 +291,20 @@
 
     .result-park-icon {
         background-color: $orange;
-        color: white
+        color: white; 
     }
 
     .result-trail-icon {
         background-color: $buttonGreen;
         color: white;
     }
+}
+
+.trail-park-search {
+    align-items: right;
+}
+
+.icon {
+    font-size: 24px;
+    align-items: center;
 }

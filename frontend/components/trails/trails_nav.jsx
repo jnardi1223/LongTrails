@@ -1,4 +1,5 @@
 import React from "react";
+import SearchContainer from "./../search/search_container"
 
 class TrailsNav extends React.Component {
     constructor(props) {
@@ -14,11 +15,10 @@ class TrailsNav extends React.Component {
     render() {
         return (
         <div className="trail-page-nav">
-            <form className="sub-search-input">
+
             {/* <form className="sub-search-input" onSubmit={handleSumit}> */}
-                <input value="Enter park or trial name"></input>
-                <button>Search</button>
-            </form>
+            <SearchContainer/>
+           
         </div>
         )
     }

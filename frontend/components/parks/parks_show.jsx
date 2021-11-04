@@ -1,5 +1,7 @@
 import React from "react";
 import TrailsNavContainer from "../trails/trails_nav_container"
+import SearchContainer from "./../search/search_container"
+import SubNavContainer from "./../nav_bar/subnav_container"
 import TrailIndex from "../trails/trail_index"
 import ParkMap from "../map/park_map"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,11 +33,7 @@ class ParksShow extends React.Component {
         // console.log(this.props.park)
         return (
             <div className="park-page">
-                <div className="bread-crumbs">
-                    <p>United States</p>   {">"}
-                    <p>{park.state}</p>   
-                    <TrailsNavContainer/>
-                </div>
+                <SubNavContainer park={park}/>
                 <div className="title-photo-box">
                     <img src={park.img_url}/>
                 </div>

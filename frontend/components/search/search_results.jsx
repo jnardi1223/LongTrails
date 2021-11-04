@@ -18,12 +18,12 @@ class SearchResults extends React.Component {
                 <li className={`${parent}search-result-item`} key={idx}>
                     {result.category === "Trail" ? (
                     <Link to={`/trail/${result.id}`} >
-                        <div className="result-trail-icon"><FontAwesomeIcon icon={faMapSigns} /></div>
+                        <div className="result-trail-icon"><FontAwesomeIcon icon={faMapSigns} className="icon" /></div>
                             {result.trail_name}
                         </Link>
                     ) : (
                         <Link to={`/park/${result.id}`}>
-                            <div className="result-park-icon"> <FontAwesomeIcon icon={faTree} /></div>
+                            <div className="result-park-icon"> <FontAwesomeIcon icon={faTree} className="icon"/></div>
                             {result.park_name}
                         </Link>
                     )}
