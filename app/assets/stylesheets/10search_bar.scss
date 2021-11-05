@@ -34,11 +34,14 @@ button {
     background-color: white;
     background-clip: padding-box;
     border-radius: 20px;
+    width: 70%; 
+    margin-left: 15%;
 
     input {
         width: 100%;
         color: $lighterGrey;
         text-align: left;
+        margin-left: 0%;
     }   
 
     input::placeholder {
@@ -84,7 +87,7 @@ button {
     z-index: 2;
     background-color: #ffff;
     border-style: solid;
-    width: 70%;
+    width: 49%;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     font-size: 12px;
