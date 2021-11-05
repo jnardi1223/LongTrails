@@ -58,9 +58,9 @@ function formatDate(date) {
                         </div>
                         <div>
                             {currUser == review.user_id ? (
-                            <p><span className="delete-review-text"
-                            onClick={() => deleteReview(review.id)}>Delete</span>  |
-                            <span className="edit-review-text"
+                            <p><span className="review-button"
+                            onClick={() => deleteReview(review.id)}>Delete</span>  |  <span className="edit-review-text"
+                                className="review-button"
                                 onClick={() => showEditForm()}>Edit</span></p>
                             ) : null}
                         </div>

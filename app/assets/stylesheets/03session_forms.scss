@@ -7,7 +7,7 @@
 
 .session-form {
   width: 480px;
-  height: 400px;
+  // height: 400px;
   position: absolute;
   top: 10%;
   left: 50%;
@@ -37,7 +37,7 @@
   input {
     color: gray;
     font-size: 18px;
-    width: 90%;
+    width: 103%;
     border-radius: 15px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,.24), 0 0 8px 0 rgba(0,0,0,.08);
     border-width: 1in;
@@ -94,4 +94,18 @@ text-align: center;
 .text-field {
   height: 35px;
   font-size: 28px;
+}
+
+.email {
+  text-align: center;
+}
+
+.errors {
+  color: red;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.session-link {
+  padding-bottom: 10px;
 }

@@ -24,6 +24,7 @@ button {
     font-size:  24px;
     margin-bottom: 0;
     z-index: 1;
+    border-radius: 1px black;
 }
 
 
@@ -86,8 +87,8 @@ button {
     width: 70%;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    border: $contentBorder;
     font-size: 12px;
+    border-radius: 12px;
 
 
     li {

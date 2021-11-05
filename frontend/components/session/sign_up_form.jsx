@@ -83,9 +83,10 @@ class SignUp extends React.Component {
                             <br/>
                             <br/>
                             <button className="prime">Submit</button>
-                            
-                            {this.renderErrors()}
-                        <p>Already have an account?<Link className="inline-link" to="/signin"> Sign In</Link></p>
+                            <div className="errors">
+                                {this.renderErrors()}
+                            </div>
+                        <p className="session-link">Already have an account?<Link className="inline-link" to="/signin"> Sign In</Link></p>
                         </form>
                 </div>
              </div>
