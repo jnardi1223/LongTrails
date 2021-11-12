@@ -6,3 +6,6 @@ LongTrails is a clone of AllTrails with the name being inspited by a trail I've 
 * User Authentification
 
 ![User Auth](app/assets/images/sign_up.jpeg)
+
+
+![User Auth](app/assets/images/sign_in.jpeg)
