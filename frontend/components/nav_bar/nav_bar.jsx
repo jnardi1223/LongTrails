@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCampground } from "@fortawesome/free-solid-svg-icons";
+import { faCampground, faHiking } from "@fortawesome/free-solid-svg-icons";
 
 
 const logo = (
         <div className="nav-logo-title">
+                <Link className="nav-link" to="/">
             <div>
-                <Link to="/">
                     <i className="fas faCampground fa-2x">
                     <FontAwesomeIcon icon={faCampground} />
                     </i>
-                </Link>
              </div>
              <div className="nav-title">LongTrails</div> 
+                </Link>
         </div> )
         
 
@@ -27,6 +27,7 @@ const Nav = ({ user, signOut }) => {
     if (user) {
         return (
             <div className="main-nav">
+                {navSiteLinks}
                 {logo}
                 <div>
                     <p className="users-name">Hello, {user.first_name}</p>
@@ -35,6 +36,23 @@ const Nav = ({ user, signOut }) => {
                     <button className="sign-out-button" onClick={signOut}>Sign Out</button> */}
                 </div>
             </div>
+            // <>
+            // <div className="main-nav">
+            // {navSiteLinks}
+            // {logo}
+            // <div className="dropdown-select">
+            //     <div className="profile-pic">
+            //         <FontAwesomeIcon icon={faHiking} />
+            //     </div>  
+            //     <p>{user.firstname}</p>
+            //  </div>
+            // </div>
+            // <ul className="user-dropdown">
+            //     <li>
+            //         <button onClick={signOut}>Logout</button>
+            //     </li>
+            // </ul>
+        // </>
         )
     } else {
         return (

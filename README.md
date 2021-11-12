@@ -1,24 +1,8 @@
-# README
+# LongTrails
+LongTrails is a clone of AllTrails with the name being inspited by a trail I've hiked many times, the Long Trail. Stretching the length Vermont all the way to Canada! 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Functionality and MVP 
 
-Things you may want to cover:
+* User Authentification
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![User Auth](app/assets/images/sign_up.jpeg)

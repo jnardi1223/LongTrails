@@ -7,6 +7,7 @@
 }
 
 .nav-title {
+    padding-top: 5px; 
     padding-left: 10px;
     color:gray;
     font-size: 30px;
@@ -20,6 +21,8 @@
 
 .users-name {
     font-size: 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .nav-site-links {
@@ -33,15 +36,15 @@
     color:green;
     flex: 1;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
 }
-.user-auth {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
+// .user-auth {
+//     flex: 1;
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+// }
 
 .sign-up-button {
     font-size: 18px;
@@ -66,5 +69,83 @@
 // .nav-logo-title {
 //     image: image_url("logo.jpeg");
 // }
+.nav-link {
+    display: flex;
+}
 
+.user-dropdown {
+    display: none;
+    position: absolute;
+    margin-top: 140px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.24), 0 0 8px 0 rgba(0,0,0,.08);
+    border-radius: 8px;
+    width: 180px;
+    z-index: 1;
+    color: Grey;
+    align-items: right;
+
+    button {
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    li:hover {
+        background-color: Grey
+    }
+
+    li:first-child {
+        margin-top: 16px;
+    }
+
+    li:last-child {
+        margin-bottom: 16px;
+    }
+}
+
+.profile-pic {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: Grey;
+    color: darkgrey;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
+}
+
+.dropdown-select {
+    position: relative;
+    cursor: pointer;
+    display: flex; 
+    align-items: center;
+    padding: 8px;
+
+    p {
+        color: Grey;
+    }
+}
+
+
+.dropdown-select:hover + .user-dropdown {
+    cursor: pointer;
+    display: block;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.24), 0 0 8px 0 rgba(0,0,0,.08);
+    border-radius: 8px;
+    width: 180px;
+    z-index: 3;
+
+    button {
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+}
 
