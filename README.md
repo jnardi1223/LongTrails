@@ -32,3 +32,12 @@ LongTrails is a clone of AllTrails with the name being inspited by a trail I've 
 
 * Search Trails
 
+    On the homepage, trail index page, or park index page, users can search for a hike or park in the area. I was able to use the query string to filter out trail or park names that did not match the user input. 
+
+    ![Reviews](app/assets/images/search_1.jpeg)
+
+* Next Feature
+    - Incorperating AWS to allow users to upload pictures from their hikes
+    - Creating a users profile page
+
+
