@@ -1,5 +1,5 @@
 # LongTrails
-LongTrails is a clone of AllTrails with the name being inspited by a trail I've hiked many times, the Long Trail. Stretching the length Vermont all the way to Canada! 
+[LongTrails](https://long-trails-staging.herokuapp.com/#/) is a clone of AllTrails with the name being inspited by a trail I've hiked many times, the Long Trail. Stretching the length Vermont all the way to Canada! 
 
 ## Technologies
 
