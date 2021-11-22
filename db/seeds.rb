@@ -46,7 +46,27 @@ park_3 = Park.create!(park_name: "Green Mountain National Forest",
                      long: -72.9996,
                      img_url: "https://peakvisor.com/img/news/Green-Mountains-National-Forest1.jpg"
                   )
-
+park_4 = Park.create!(park_name: "Ragged Mountain",
+                     state: "Connecticut",
+                     town: "Kensington",
+                     description: "Ragged Mountain Blue and Red Blazed Loop is a 5.6 mile heavily trafficked loop trail located near Berlin, Connecticut that features a lake and is rated as moderate. The trail offers a number of activity options and is accessible year-round. Dogs are also able to use this trail but must be kept on leash.",
+                     park_type: "State",
+                     higest_elevation: 843,
+                     lat: 41.6183,
+                     long: -72.8233,
+                     img_url: "https://cdn-assets.alltrails.com/uploads/photo/image/20615843/extra_large_872626cce57de11d91876b4547a86d79.jpg"
+                  )
+                  
+park_5 = Park.create!(park_name: "Simsbury Land Trust",
+                     state: "Connecticut",
+                     town: "Simsbury",
+                     description: "Want to find the best trails in Simsbury Land Trust for an adventurous hike or a family trip? AllTrails has 9 great hiking trails, biking trails, running trails and more. Enjoy hand-curated trail maps, along with reviews and photos from nature lovers like you.",
+                     park_type: "State",
+                     higest_elevation: 843,
+                     lat: 41.6183,
+                     long: -72.8233,
+                     img_url: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Talcott_Mountain_Fall.jpg"
+                  )
 
 Trail.destroy_all 
 trail_1 = Trail.create!(trail_name: "Castle Craig",
@@ -156,6 +176,57 @@ trail_8 = Trail.create!(trail_name: "Mount Abraham",
                        img_url: "https://lh3.googleusercontent.com/proxy/AKfTzDe3Yg6iI1D4Hw0bpBYlg9DfYjss8b9Of_D9XqKv2haGZmIJKSGQ8InYIOpZZz985WrrLkcKSWzFLOLrvHbQWQ",
                        img_url_2: "https://www.vermontvacation.com/~/media/images/rotator%20images/summer/hiking-in-stowe-view-from-summit.ashx"
                     )
+trail_9 = Trail.create!(trail_name: "Metacomet Trail Loop",
+                       summary: "Metacomet Trail Loop is a 3.9 mile loop trail located near Berlin, Connecticut that features a lake and is rated as moderate. The trail is primarily used for hiking, walking, running, and nature trips. Dogs are also able to use this trail but must be kept on leash.",
+                       difficulty: "moderate",
+                       length: "3.9",
+                       elevation_gain: 623,
+                       route_type: "loop",
+                       park_id: park_4.id,
+                       lat: 41.6183,
+                       long: -72.8233,
+                       img_url: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ragged_Mountain_CT.jpg",
+                       img_url_2: "https://mapio.net/images-p/37893941.jpg"
+                    )
+trail_10 = Trail.create!(trail_name: "Ragged Mountain Blue and Red Blazed loop",
+                       summary: "Ragged Mountain Blue and Red Blazed Loop is a 5.6 mile heavily trafficked loop trail located near Berlin, Connecticut that features a lake and is rated as moderate. The trail offers a number of activity options and is accessible year-round. Dogs are also able to use this trail but must be kept on leash.",
+                       difficulty: "moderate",
+                       length: "5.6",
+                       elevation_gain: 843,
+                       route_type: "loop",
+                       park_id: park_4.id,
+                       lat: 41.6183,
+                       long: -72.8233,
+                       img_url: "https://cdn2.apstatic.com/photos/climb/109140655_medium_1494339783.jpg",
+                       img_url_2: "https://images.squarespace-cdn.com/content/v1/56dc7a6820c647a2ce55e533/1459723965598-K31UI32ED9DN77BZ3XZ5/Ascent-climbing-ragged-mountain-broadway.jpg"
+                    )
+trail_11 = Trail.create!(trail_name: "Hedgehog Trail",
+                       summary: "Hedgehog Trail is a 4.8 mile heavily trafficked loop trail located near West Simsbury, Connecticut that features beautiful wild flowers and is rated as moderate. The trail offers a number of activity options and is best used from March until November. Dogs are also able to use this trail but must be kept on leash.",
+                       difficulty: "moderate",
+                       length: "4.8",
+                       elevation_gain: 912,
+                       route_type: "loop",
+                       park_id: park_5.id,
+                       lat: 43.6045,
+                       long: -72.8201,
+                       img_url: "https://cdn2.apstatic.com/photos/climb/109140655_medium_1494339783.jpg",
+                       img_url_2: "https://cdn-assets.alltrails.com/uploads/photo/image/19910889/extra_large_721c6ef877c63abfe4620370e923e0a5.jpg"
+                    )
+trail_12 = Trail.create!(trail_name: "Trust Catles South",
+                       summary: "Simsbury Land Trust Cathles South is a 3.6 mile moderately trafficked loop trail located near West Simsbury, Connecticut that features a waterfall and is rated as moderate. The trail is primarily used for hiking, walking, nature trips, and bird watching.",
+                       difficulty: "moderate",
+                       length: "3.6",
+                       elevation_gain: 731,
+                       route_type: "loop",
+                       park_id: park_5.id,
+                       lat: 43.6045,
+                       long: -72.8201,
+                       img_url: "https://simsburylandtrust.org/slt/wp-content/uploads/2020/05/welcome_page.jpg",
+                       img_url_2: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Talcott_Mountain_Fall.jpg"
+                    )
+
+
+
 Review.destroy_all
 review_1 = Review.create(rating: 5, 
                         review: "This hike was amazing! The view fromt he top of castle craig is incredible", 
