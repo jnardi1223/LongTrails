@@ -55,7 +55,10 @@ class SignIn extends React.Component {
                 <div className="session-form">
                     <form onSubmit={this.handleSubmit}>
                         <h2>{this.props.formType}</h2>
-                            <label className="email">Email
+                            <label className="email">
+                                <div className="session-label">
+                                Email
+                                </div>
                                 <input className="text-field" 
                                     type="email" 
                                     value={this.state.email} 
@@ -63,7 +66,9 @@ class SignIn extends React.Component {
                                 />
                             </label>
                                 <br/>
-                            <label>Password
+                            <label>
+                                <div className="session-label">Password
+                                </div>
                                 <input className="text-field"
                                     type="password" 
                                     value={this.state.password} 

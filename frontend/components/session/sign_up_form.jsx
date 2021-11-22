@@ -49,7 +49,8 @@ class SignUp extends React.Component {
                     <div className="session-form">
                         <form onSubmit={this.handleSubmit}>
                         <h2>{this.props.formType}</h2>
-                            <label>First Name
+                            <label>
+                                <div className="session-label">First Name</div>
                                 <input className="text-field"
                                     type="text" 
                                     value={this.state.first_name} 
@@ -57,7 +58,8 @@ class SignUp extends React.Component {
                                 />
                             </label>
                             <br/>
-                            <label>Last Name
+                            <label>
+                                <div className="session-label">Last Name</div>
                                 <input className="text-field"
                                     type="text" 
                                     value={this.state.last_name} 
@@ -65,7 +67,8 @@ class SignUp extends React.Component {
                                 />
                             </label>
                                 <br/>
-                            <label>Email
+                            <label>
+                                <div className="session-label">Email</div>
                                 <input className="text-field"
                                     type="email" 
                                     value={this.state.email} 
@@ -73,7 +76,8 @@ class SignUp extends React.Component {
                                 />
                             </label>
                                 <br/>
-                            <label>Password
+                            <label>
+                                <div className="session-label">Password</div>
                                 <input className="text-field"
                                     type="password" 
                                     value={this.state.password} 
